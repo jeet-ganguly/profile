@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Birdy-Edwards</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e1e2eb",
+                        "on-secondary-fixed-variant": "#004a77",
+                        "secondary-container": "#005182",
+                        "on-secondary-container": "#8bc4fc",
+                        "on-tertiary-container": "#ffdfda",
+                        "on-secondary": "#003354",
+                        "inverse-on-surface": "#2e3037",
+                        "outline-variant": "#414752",
+                        "secondary": "#98cbff",
+                        "primary": "#a8c8ff",
+                        "surface-bright": "#363940",
+                        "on-surface-variant": "#c1c6d4",
+                        "on-primary": "#003062",
+                        "surface-container-high": "#272a31",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#98cbff",
+                        "on-secondary-fixed": "#001d33",
+                        "on-tertiary-fixed-variant": "#930004",
+                        "tertiary-container": "#c5281f",
+                        "on-error": "#690005",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-surface": "#e1e2eb",
+                        "surface-container-low": "#191c22",
+                        "on-tertiary-fixed": "#410001",
+                        "on-tertiary": "#690002",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-container-lowest": "#0b0e14",
+                        "secondary-fixed": "#cfe5ff",
+                        "surface-variant": "#32353c",
+                        "surface-dim": "#10131a",
+                        "surface-tint": "#a8c8ff",
+                        "background": "#10131a",
+                        "error": "#ffb4ab",
+                        "on-background": "#e1e2eb",
+                        "outline": "#8b919e",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#10131a",
+                        "inverse-primary": "#005eb5",
+                        "surface-container": "#1d2026",
+                        "on-primary-fixed-variant": "#00468a",
+                        "on-primary-container": "#dbe6ff",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary-container": "#0a66c2",
+                        "tertiary": "#ffb4a9",
+                        "surface-container-highest": "#32353c",
+                        "tertiary-fixed-dim": "#ffb4a9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-panel {
+            background: rgba(29, 32, 38, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(168, 200, 255, 0.08), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(197, 40, 31, 0.05), transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar Shell -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_48px_rgba(0,0,0,0.4)]">
+        <div class="flex items-center justify-between px-10 py-6 max-w-screen-2xl mx-auto">
+
+            <div class="flex items-center gap-6">
+                <span
+                    class="text-2xl font-black text-slate-50 order-last ml-8 font-['Plus_Jakarta_Sans'] tracking-tight">Birdy-Edwards</span>
+                <a href="index.html">
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold hover:scale-95 active:duration-100 transition-all">Back</button></a>
+
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 hero-gradient min-h-screen">
+        <!-- Hero Section -->
+        <section class="max-w-screen-2xl mx-auto px-10 mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                <div class="lg:col-span-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/30 text-secondary rounded-full mb-6">
+                        <span class="material-symbols-outlined text-sm"
+                            style="font-variation-settings: 'FILL' 1;">security</span>
+                        <span class="font-label text-xs uppercase tracking-widest font-bold">OSINT Engine V4.2</span>
+                    </div>
+                    <h1 class="text-[5rem] font-extrabold leading-[1.05] tracking-tight text-white mb-8">
+                        Birdy-Edwards.
+                    </h1>
+                    <p class="text-2xl text-on-surface-variant max-w-3xl font-medium leading-relaxed">
+                        Automated AI-powered Facebook intelligence tool for target profiling, network analysis and
+                        threat reporting <span class="text-primary">Runs entirely on-device via Ollama.</span> #SOCMINT
+                        #OSINT #Intelligence #Investigation.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex justify-end">
+                    <div class="w-full aspect-square glass-panel rounded-3xl overflow-hidden relative group">
+                        <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Abstract visualization of high-speed data streams and digital nodes glowing in neon blue and deep red on a dark background"
+                            src="logo.jpeg" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="font-label text-xs text-primary mb-1 uppercase tracking-widest"></p>
+                            <p class="text-xl font-bold text-white">Facebook SOCMINT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Masterclass Tutorials Section -->
+        <section class="max-w-screen-2xl mx-auto px-10 mb-40">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-white mb-2 tracking-tight">How to use</h2>
+                    <p class="text-on-surface-variant font-medium">Deep dive into working of Birdy-Edwards.</p>
+                </div>
+                <div class="h-[1px] flex-grow mx-12 bg-white/5 hidden md:block"></div>
+                <!--<button class="flex items-center gap-2 text-primary hover:text-white transition-colors font-bold">
+                    View All Tutorials <span class="material-symbols-outlined">arrow_forward</span>
+                </button>-->
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-low">
+                        <video controls
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Cinematic shot of a hacker workspace with multiple monitors displaying terminal code in a dark room with blue ambient light"
+                            poster="logo.jpeg">
+                            <source src="Birdy-Edwards.mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
+                            <div
+                                class="playbtn w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                                <span class="material-symbols-outlined scale-150"
+                                    style="font-variation-settings: 'FILL' 1;">play_arrow
+                                </span>
+                            </div>
+                        </div>
+                        <!--<div
+                            class="absolute bottom-4 right-4 bg-slate-950/80 px-2 py-1 rounded text-[10px] font-label font-bold text-white uppercase tracking-tighter">
+                            01:08</div>-->
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Birdy-Edwards Trailer</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">How Birdy-Edwards works, features, UI and
+                        Intel gathering.</p>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-low">
+                        <video controls
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Cinematic shot of a hacker workspace with multiple monitors displaying terminal code in a dark room with blue ambient light"
+                            poster="logo.jpeg">
+                            <source src="profile.mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
+                            <div
+                                class="playbtn w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                                <span class="material-symbols-outlined scale-150"
+                                    style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </div>
+                        </div>
+                        <!--<div
+                            class="absolute bottom-4 right-4 bg-slate-950/80 px-2 py-1 rounded text-[10px] font-label font-bold text-white uppercase tracking-tighter">
+                            21:05</div>-->
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Automated Profile Analysis Demo</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Here in this video you learn how to
+                        investigate a single facebook profile and how you gather useful intel from charts and graphs.
+                    </p>
+                </div>
+                <!-- Video Card 3 -->
+                <div class="group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-surface-container-low">
+                        <video controls
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Cinematic shot of a hacker workspace with multiple monitors displaying terminal code in a dark room with blue ambient light"
+                            poster="logo.jpeg">
+                            <source src="batch.mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
+                            <div
+                                class="playbtn w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                                <span class="material-symbols-outlined scale-150"
+                                    style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </div>
+                        </div>
+                        <!--<div
+                            class="absolute bottom-4 right-4 bg-slate-950/80 px-2 py-1 rounded text-[10px] font-label font-bold text-white uppercase tracking-tighter">
+                            18:45</div>-->
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-white mb-2">Investigation of Manual Batch Urls Video Demo</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Here in this video you learn how to
+                        investigate and input manually given urls remember one thing the url must contain "/posts/ or
+                        /reel/ or /reels/ or /photo? or /photo/" .</p>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Technical Architecture Section -->
+        <section class="max-w-screen-2xl mx-auto px-10 mb-40">
+            <div class="bg-surface-container-low rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+                    <div>
+                        <h2 class="text-[3.5rem] font-extrabold text-white leading-tight mb-8 tracking-tight">Who is it
+                            for?</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">Search</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">OSINT Researchers</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Profile mapping, Interactor
+                                        profiling, behavioral pattern
+                                        extraction.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">shield</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Threat Intelligence Analysts</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Identify threat actors, hostile
+                                        commenters, coordinated activity.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">gavel</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Law Enforcement / Cybercrime
+                                        Units</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Structured evidence gathering
+                                        from public Facebook content.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">psychology</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Defense & Intelligence
+                                        Agencies</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Counter-narrative monitoring,
+                                        influence operation detection in Facebook.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">news</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Journalists & Investigative
+                                        Reporters</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Expose coordinated harassment,
+                                        troll networks, disinformation
+                                        clusters.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-lg">school</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Academic Researchers</h4>
+                                    <p class="text-on-surface-variant leading-relaxed">Social network analysis,
+                                        sentiment research, political
+                                        communication studies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div
+                            class="bg-surface-container-lowest rounded-3xl p-8 border border-white/5 font-label text-sm leading-relaxed text-on-surface-variant">
+                            <div class="flex gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-error/40"></div>
+                                <div class="w-3 h-3 rounded-full bg-primary/40"></div>
+                                <div class="w-3 h-3 rounded-full bg-secondary/40"></div>
+                            </div>
+                            <pre class="overflow-x-auto"><code><span class="text-primary">def</span> <span class="text-secondary">birdy_edwards</span>(target_url: str):
+    <span class="text-on-surface-variant"># Initializing LLM engine...</span>
+    results = <span class="text-primary"></span> data.gathered(
+        intel.metadata(target),
+        intel.interactors(target),
+        intel.co-interactors(target),
+        intel.interactors_country(target),
+        intel.detected_faces(target),
+        intel.faces_clusters(target)
+    )
+    
+    <span class="text-primary">return</span> results
+
+<span class="text-on-surface-variant"></span></code></pre>
+                            <!--<div class="mt-6 flex justify-between items-center pt-6 border-t border-white/5">
+                                <span class="text-[10px] uppercase font-bold tracking-widest text-primary/60">System
+                                    Status: Active</span>
+                                <span
+                                    class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Latency:
+                                    42ms</span>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Shell -->
+    <footer class="w-full py-12 px-10 mt-20 bg-slate-950 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+            <span class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500"></span>
+            <div class="flex gap-10">
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 hover:text-blue-300 transition-all opacity-80 hover:opacity-100"
+                    href="#"></a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 hover:text-blue-300 transition-all opacity-80 hover:opacity-100"
+                    href="#"></a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 hover:text-blue-300 transition-all opacity-80 hover:opacity-100"
+                    href="#"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const playBtns = document.querySelectorAll(".playbtn");
+
+        playBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const container = btn.closest(".group");
+                const video = container.querySelector("video");
+                const overlay = btn.parentElement;
+
+                // Play video
+                video.play();
+
+                // Hide overlay
+                overlay.style.display = "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
