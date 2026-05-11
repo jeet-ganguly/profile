@@ -1,0 +1,37 @@
+[
+  {
+    "slug":        "linux-sysadmin-notes",
+    "title":       "Linux SYSADMIN — Notes",
+    "date":        "2026-05-11",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on ACL, Service management, Disk & RAM monitoring, Process monitoring",
+    "tags":        ["linux","sysadmin"]
+  },
+  {
+    "slug":        "linux-awk-notes",
+    "title":       "Linux AWK — Notes",
+    "date":        "2026-05-11",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on AWK scripting",
+    "tags":        ["linux","AWK"]
+  },
+  {
+    "slug":        "linux-sed-notes",
+    "title":       "Linux SED — Notes",
+    "date":        "2026-05-11",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on SED scripting",
+    "tags":        ["linux","SED"]
+  },
+  {
+    "slug":        "osint-methodology",
+    "title":       "OSINT Methodology — My Personal Framework",
+    "date":        "2026-04-15",
+    "type":        "osint",
+    "description": "A structured approach to OSINT investigations: target scoping, platform pivoting, SOCMINT, and formal reporting.",
+    "tags":        ["osint", "socmint", "methodology", "framework"]
+  }
+]

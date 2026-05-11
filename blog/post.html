@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Post | Jeet Ganguly</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+    <!-- highlight.js (matches dark theme) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0b0e14",
+                        "surface-container-highest": "#32353c",
+                        "surface": "#10131a",
+                        "primary-container": "#0a66c2",
+                        "secondary": "#98cbff",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "on-surface": "#e1e2eb",
+                        "background": "#10131a",
+                        "surface-container-low": "#191c22",
+                        "on-surface-variant": "#c1c6d4",
+                        "on-primary": "#003062",
+                        "on-background": "#e1e2eb",
+                        "tertiary-container": "#c5281f",
+                        "surface-dim": "#10131a",
+                        "surface-container-high": "#272a31",
+                        "secondary-fixed": "#cfe5ff",
+                        "tertiary": "#ffb4a9",
+                        "on-primary-container": "#dbe6ff",
+                        "secondary-container": "#005182",
+                        "primary": "#a8c8ff",
+                        "surface-container": "#1d2026"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "fontFamily": { "headline": ["Plus Jakarta Sans"], "body": ["Plus Jakarta Sans"], "label": ["Space Grotesk"] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* ── Markdown prose styles ── */
+        .prose h1,
+        .prose h2,
+        .prose h3,
+        .prose h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #e1e2eb;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .prose h1 {
+            font-size: 2rem;
+        }
+
+        .prose h2 {
+            font-size: 1.5rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid #a8c8ff;
+        }
+
+        .prose h3 {
+            font-size: 1.2rem;
+            color: #a8c8ff;
+        }
+
+        .prose h4 {
+            font-size: 1rem;
+            color: #98cbff;
+        }
+
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #c1c6d4;
+        }
+
+        .prose ul,
+        .prose ol {
+            margin: 0.75rem 0 1.25rem 1.5rem;
+        }
+
+        .prose li {
+            margin-bottom: 0.4rem;
+            color: #c1c6d4;
+            line-height: 1.7;
+        }
+
+        .prose a {
+            color: #a8c8ff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(168, 200, 255, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .prose a:hover {
+            border-color: #a8c8ff;
+        }
+
+        .prose strong {
+            color: #e1e2eb;
+            font-weight: 700;
+        }
+
+        .prose em {
+            color: #c1c6d4;
+        }
+
+        /* code */
+        .prose pre {
+            background: #0d1117 !important;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 0.75rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .prose pre code {
+            font-family: 'Space Grotesk', 'Courier New', monospace !important;
+            font-size: 0.82rem !important;
+            line-height: 1.65 !important;
+            padding: 1.25rem !important;
+            display: block;
+        }
+
+        /* language label */
+        .prose pre[data-lang]::after {
+            content: attr(data-lang);
+            position: absolute;
+            top: 0.6rem;
+            right: 0.9rem;
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.65rem;
+            color: #5a7a96;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* inline code */
+        .prose code:not(pre code) {
+            font-family: 'Space Grotesk', monospace;
+            font-size: 0.82rem;
+            background: rgba(168, 200, 255, 0.08);
+            border: 1px solid rgba(168, 200, 255, 0.18);
+            color: #a8c8ff;
+            padding: 0.1rem 0.45rem;
+            border-radius: 0.35rem;
+        }
+
+        /* blockquote */
+        .prose blockquote {
+            border-left: 3px solid #ffd32a;
+            background: rgba(255, 211, 42, 0.05);
+            padding: 0.75rem 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            color: #c1c6d4;
+            font-style: italic;
+        }
+
+        /* table */
+        .prose table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .prose th {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #a8c8ff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+        }
+
+        .prose td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 0.75rem;
+            color: #c1c6d4;
+        }
+
+        .prose tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* hr */
+        .prose hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin: 2.5rem 0;
+        }
+
+        /* spinner */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            animation: spin 0.8s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary">
+
+    <!-- NAV -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-xl border-b border-white/5 shadow-[0px_24px_48px_rgba(0,0,0,0.4)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="../index.html"
+                class="text-xl font-bold tracking-tighter text-white font-['Plus_Jakarta_Sans']">Jeet Ganguly</a>
+            <a href="index.html"
+                class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-bold font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+                <span class="material-symbols-outlined text-base">arrow_back</span>
+                Back to Blog
+            </a>
+        </div>
+    </nav>
+
+    <!-- LOADING STATE -->
+    <main class="pt-24 min-h-screen" id="main">
+        <div class="max-w-3xl mx-auto px-8 py-32 text-center" id="loading-state">
+            <div class="w-8 h-8 rounded-full border-2 border-white/10 border-t-primary spinner mx-auto mb-6"></div>
+            <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Loading post...</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 w-full py-12 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto">
+            <div class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-slate-500">© 2025 Jeet Ganguly.
+                Technical Portfolio.</div>
+            <div class="flex gap-8 mt-8 md:mt-0">
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="https://www.linkedin.com/in/jeet-ganguly/" target="_blank">LinkedIn</a>
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="https://github.com/jeet-ganguly" target="_blank">GitHub</a>
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="mailto:jganguly148@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const TYPE = {
+            ctf: { label: 'CTF', icon: 'flag', text: 'text-tertiary', bg: 'bg-tertiary-container/20', border: 'border-tertiary/20' },
+            notes: { label: 'Notes', icon: 'description', text: 'text-secondary', bg: 'bg-secondary-container/20', border: 'border-secondary/20' },
+            osint: { label: 'OSINT', icon: 'travel_explore', text: 'text-primary', bg: 'bg-primary/10', border: 'border-primary/20' },
+            tools: { label: 'Tools', icon: 'build', text: 'text-primary-fixed-dim', bg: 'bg-primary-fixed-dim/10', border: 'border-primary-fixed-dim/20' },
+        };
+        const DIFF = {
+            easy: 'text-green-400 bg-green-400/10 border-green-400/20',
+            medium: 'text-yellow-300 bg-yellow-300/10 border-yellow-300/20',
+            hard: 'text-tertiary bg-tertiary-container/20 border-tertiary/20',
+            insane: 'text-secondary bg-secondary-container/20 border-secondary/20',
+        };
+
+        const slug = new URLSearchParams(window.location.search).get('slug');
+
+        async function load() {
+            if (!slug) { showError('No post specified.'); return; }
+            try {
+                const [metaRes, mdRes] = await Promise.all([
+                    fetch('../posts/index.json'),
+                    fetch(`../posts/${slug}.md`)
+                ]);
+                if (!mdRes.ok) throw new Error('md not found');
+                const allPosts = await metaRes.json();
+                const md = await mdRes.text();
+                const meta = allPosts.find(p => p.slug === slug);
+                const idx = allPosts.findIndex(p => p.slug === slug);
+                render(meta, md, allPosts[idx - 1] ?? null, allPosts[idx + 1] ?? null);
+            } catch (e) {
+                showError(`Post <code>${slug}.md</code> not found. Make sure it exists in the <code>posts/</code> folder.`);
+            }
+        }
+
+        function render(meta, md, prev, next) {
+            if (meta) document.title = `${meta.title} | Jeet Ganguly`;
+            const type = meta?.type || 'notes';
+            const tc = TYPE[type] || TYPE.notes;
+            const dk = meta?.difficulty?.toLowerCase();
+            const dc = dk ? DIFF[dk] || '' : '';
+
+            const renderer = new marked.Renderer();
+
+            renderer.heading = function (text, level) {
+                const slug = text
+                    .toLowerCase()
+                    .replace(/<[^>]+>/g, '')   // strip any HTML inside heading
+                    .replace(/[^\w\s-]/g, '')  // remove . ( ) / etc — keep word chars, spaces, hyphens
+                    .replace(/ /g, '-');       // each space → hyphen individually (GitHub-style)
+
+                return `<h${level} id="${slug}">${text}</h${level}>`;
+            };
+
+            marked.setOptions({ gfm: true, breaks: false, renderer: renderer });
+
+            marked.setOptions({ gfm: true, breaks: false });
+
+            document.getElementById('main').innerHTML = `
+        <article class="max-w-3xl mx-auto px-8 pb-32 pt-12">
+
+            <!-- breadcrumb -->
+            <div class="flex items-center gap-2 font-label text-xs uppercase tracking-widest text-on-surface-variant mb-10">
+                <a href="../index.html" class="hover:text-primary transition-colors">Home</a>
+                <span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+                <a href="index.html"   class="hover:text-primary transition-colors">Blog</a>
+                <span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+                <span class="text-on-surface truncate max-w-[200px]">${meta?.title || slug}</span>
+            </div>
+
+            <!-- header -->
+            <header class="mb-12 pb-10 border-b border-white/5">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border font-label text-xs font-bold uppercase tracking-widest ${tc.bg} ${tc.border} ${tc.text}">
+                        <span class="material-symbols-outlined text-sm">${tc.icon}</span>${tc.label}
+                    </span>
+                    ${dk ? `<span class="px-2.5 py-0.5 rounded-full border font-label text-xs font-bold uppercase ${dc}">${meta.difficulty}</span>` : ''}
+                    ${meta?.platform ? `<span class="px-2.5 py-0.5 rounded-full border border-white/10 font-label text-xs font-bold uppercase text-on-surface-variant">${meta.platform}</span>` : ''}
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight mb-4">${meta?.title || slug}</h1>
+                ${meta?.description ? `<p class="text-xl text-on-surface-variant leading-relaxed mb-6">${meta.description}</p>` : ''}
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                    ${(meta?.tags || []).map(t => `<span class="px-3 py-1 bg-surface-container-highest rounded-xl text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">${t}</span>`).join('')}
+                </div>
+
+                <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">${meta?.date || ''}</div>
+            </header>
+
+            <!-- content -->
+            <div class="prose" id="content">
+                ${marked.parse(md)}
+            </div>
+
+            <!-- prev/next -->
+            <div class="grid grid-cols-2 gap-4 mt-16 pt-8 border-t border-white/5">
+                ${next ? `
+                <a href="post.html?slug=${next.slug}" class="group flex flex-col gap-1 p-5 bg-surface-container-low rounded-2xl border border-white/5 hover:border-primary/20 hover:bg-surface-container-high transition-all">
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">arrow_back</span>Previous
+                    </span>
+                    <span class="font-bold text-sm group-hover:text-primary transition-colors">${next.title}</span>
+                </a>` : '<div></div>'}
+                ${prev ? `
+                <a href="post.html?slug=${prev.slug}" class="group flex flex-col gap-1 p-5 bg-surface-container-low rounded-2xl border border-white/5 hover:border-primary/20 hover:bg-surface-container-high transition-all text-right ml-auto w-full">
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant flex items-center gap-1 justify-end">
+                        Next<span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </span>
+                    <span class="font-bold text-sm group-hover:text-primary transition-colors">${prev.title}</span>
+                </a>` : '<div></div>'}
+            </div>
+        </article>`;
+
+            // Syntax highlighting + language labels
+            document.querySelectorAll('#content pre code').forEach(block => {
+                hljs.highlightElement(block);
+                const lang = block.className.match(/language-(\w+)/)?.[1] || '';
+                if (lang) block.parentElement.setAttribute('data-lang', lang);
+            });
+        }
+
+        function showError(msg) {
+            document.getElementById('main').innerHTML = `
+        <div class="max-w-3xl mx-auto px-8 py-32 text-center">
+            <span class="material-symbols-outlined text-tertiary text-5xl mb-6 block">error</span>
+            <h2 class="text-2xl font-extrabold tracking-tight mb-4">Post not found</h2>
+            <p class="text-on-surface-variant mb-8">${msg}</p>
+            <a href="index.html" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:brightness-110 transition-all inline-flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">arrow_back</span>Back to Blog
+            </a>
+        </div>`;
+        }
+
+        load();
+    </script>
+</body>
+
+</html>

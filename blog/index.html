@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog | Jeet Ganguly</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0b0e14",
+                        "surface-container-highest": "#32353c",
+                        "surface": "#10131a",
+                        "primary-container": "#0a66c2",
+                        "secondary": "#98cbff",
+                        "on-secondary-container": "#8bc4fc",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e1e2eb",
+                        "background": "#10131a",
+                        "secondary-fixed-dim": "#98cbff",
+                        "surface-container-low": "#191c22",
+                        "on-surface-variant": "#c1c6d4",
+                        "on-primary": "#003062",
+                        "surface-bright": "#363940",
+                        "on-background": "#e1e2eb",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-container": "#c5281f",
+                        "surface-dim": "#10131a",
+                        "surface-container-high": "#272a31",
+                        "secondary-fixed": "#cfe5ff",
+                        "tertiary": "#ffb4a9",
+                        "on-primary-container": "#dbe6ff",
+                        "outline": "#8b919e",
+                        "on-tertiary-container": "#ffdfda",
+                        "secondary-container": "#005182",
+                        "primary": "#a8c8ff",
+                        "surface-container": "#1d2026"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "fontFamily": { "headline": ["Plus Jakarta Sans"], "body": ["Plus Jakarta Sans"], "label": ["Space Grotesk"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #10131a;
+            color: #e1e2eb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .post-card {
+            transition: all 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            background-color: #272a31;
+        }
+
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn.active {
+            background-color: rgba(168, 200, 255, 0.12);
+            border-color: rgba(168, 200, 255, 0.35);
+            color: #a8c8ff;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary">
+
+    <!-- NAV — identical to index.html -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-xl border-b border-white/5 shadow-[0px_24px_48px_rgba(0,0,0,0.4)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="../index.html"
+                class="text-xl font-bold tracking-tighter text-white font-['Plus_Jakarta_Sans']">Jeet Ganguly</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
+                    href="../index.html#about">About</a>
+                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
+                    href="../index.html#projects">Projects</a>
+                <a class="text-primary font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Blog</a>
+                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
+                    href="../index.html#contact">Contact</a>
+            </div>
+            <div class="md:hidden"><span class="material-symbols-outlined text-white">menu</span></div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+
+        <!-- HERO -->
+        <section class="relative min-h-[420px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none">
+            </div>
+            <div class="relative z-10 space-y-8 max-w-2xl">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-highest rounded-full border border-white/5">
+                    <span class="material-symbols-outlined text-primary text-sm"
+                        style="font-variation-settings:'FILL' 1;">edit_note</span>
+                    <span class="font-label text-xs uppercase tracking-widest text-primary">Field Notes &amp;
+                        Writeups</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter leading-none">
+                    CTF Writeups<br /><span class="text-primary">&amp; Notes</span>
+                </h1>
+                <p class="text-xl text-on-surface-variant font-medium leading-relaxed">
+                    Technical writeups from CTF competitions, OSINT investigations, security research, and tool
+                    documentation.
+                </p>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="px-8 max-w-7xl mx-auto mb-8">
+            <div class="flex flex-wrap gap-4" id="stats-row">
+                <div class="bg-surface-container rounded-2xl px-7 py-5 border border-white/5 text-center">
+                    <div class="text-3xl font-extrabold text-primary" id="stat-total">—</div>
+                    <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">Total</div>
+                </div>
+                <div class="bg-surface-container rounded-2xl px-7 py-5 border border-white/5 text-center">
+                    <div class="text-3xl font-extrabold text-tertiary" id="stat-ctf">—</div>
+                    <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">CTF</div>
+                </div>
+                <div class="bg-surface-container rounded-2xl px-7 py-5 border border-white/5 text-center">
+                    <div class="text-3xl font-extrabold text-secondary" id="stat-notes">—</div>
+                    <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">Notes</div>
+                </div>
+                <div class="bg-surface-container rounded-2xl px-7 py-5 border border-white/5 text-center">
+                    <div class="text-3xl font-extrabold text-primary-fixed-dim" id="stat-osint">—</div>
+                    <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">OSINT</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTER -->
+        <section class="px-8 max-w-7xl mx-auto mb-10">
+            <div class="flex flex-wrap gap-3 items-center">
+                <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mr-2">Filter:</span>
+                <button
+                    class="filter-btn active px-5 py-2 rounded-xl border border-white/10 font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-xl border border-white/10 font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant"
+                    data-filter="ctf">CTF</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-xl border border-white/10 font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant"
+                    data-filter="notes">Notes</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-xl border border-white/10 font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant"
+                    data-filter="osint">OSINT</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-xl border border-white/10 font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant"
+                    data-filter="tools">Tools</button>
+            </div>
+        </section>
+
+        <!-- POSTS -->
+        <section class="px-8 max-w-7xl mx-auto pb-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="posts-grid">
+                <div class="bg-surface-container-low rounded-3xl border border-white/5 p-8 animate-pulse h-64"></div>
+                <div class="bg-surface-container-low rounded-3xl border border-white/5 p-8 animate-pulse h-64"></div>
+                <div class="bg-surface-container-low rounded-3xl border border-white/5 p-8 animate-pulse h-64"></div>
+            </div>
+            <p class="hidden text-center py-20 text-on-surface-variant font-label text-sm uppercase tracking-widest"
+                id="empty-msg">// No posts match this filter.</p>
+        </section>
+    </main>
+
+    <!-- FOOTER — identical to index.html -->
+    <footer class="bg-slate-950 w-full py-12 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto">
+            <div class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-slate-500">© 2025 Jeet Ganguly.
+                Technical Portfolio.</div>
+            <div class="flex gap-8 mt-8 md:mt-0">
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="https://www.linkedin.com/in/jeet-ganguly/" target="_blank">LinkedIn</a>
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="https://github.com/jeet-ganguly" target="_blank">GitHub</a>
+                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
+                    href="mailto:jganguly148@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const TYPE = {
+            ctf: { label: 'CTF', icon: 'flag', text: 'text-tertiary', bg: 'bg-tertiary-container/20', border: 'border-tertiary/20' },
+            notes: { label: 'Notes', icon: 'description', text: 'text-secondary', bg: 'bg-secondary-container/20', border: 'border-secondary/20' },
+            osint: { label: 'OSINT', icon: 'travel_explore', text: 'text-primary', bg: 'bg-primary/10', border: 'border-primary/20' },
+            tools: { label: 'Tools', icon: 'build', text: 'text-primary-fixed-dim', bg: 'bg-primary-fixed-dim/10', border: 'border-primary-fixed-dim/20' },
+        };
+        const DIFF = {
+            easy: 'text-green-400 bg-green-400/10 border-green-400/20',
+            medium: 'text-yellow-300 bg-yellow-300/10 border-yellow-300/20',
+            hard: 'text-tertiary bg-tertiary-container/20 border-tertiary/20',
+            insane: 'text-secondary bg-secondary-container/20 border-secondary/20',
+        };
+
+        let all = [];
+
+        async function init() {
+            try {
+                const r = await fetch('../posts/index.json');
+                if (!r.ok) throw 0;
+                all = await r.json();
+                document.getElementById('stat-total').textContent = all.length;
+                document.getElementById('stat-ctf').textContent = all.filter(p => p.type === 'ctf').length;
+                document.getElementById('stat-notes').textContent = all.filter(p => p.type === 'notes').length;
+                document.getElementById('stat-osint').textContent = all.filter(p => p.type === 'osint').length;
+                render(all);
+            } catch {
+                document.getElementById('posts-grid').innerHTML = '';
+                const m = document.getElementById('empty-msg');
+                m.textContent = '// Could not load posts/index.json';
+                m.classList.remove('hidden');
+            }
+        }
+
+        function render(posts) {
+            const grid = document.getElementById('posts-grid');
+            const msg = document.getElementById('empty-msg');
+            if (!posts.length) { grid.innerHTML = ''; msg.classList.remove('hidden'); return; }
+            msg.classList.add('hidden');
+            grid.innerHTML = posts.map(p => {
+                const tc = TYPE[p.type] || TYPE.notes;
+                const dk = p.difficulty?.toLowerCase();
+                const dc = dk ? DIFF[dk] || '' : '';
+                return `
+            <a href="post.html?slug=${p.slug}"
+               class="post-card flex flex-col bg-surface-container-low p-8 rounded-3xl border border-white/5 group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <!-- badge row -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border font-label text-xs font-bold uppercase tracking-widest ${tc.bg} ${tc.border} ${tc.text}">
+                        <span class="material-symbols-outlined text-sm">${tc.icon}</span>${tc.label}
+                    </span>
+                    ${dk ? `<span class="px-2.5 py-0.5 rounded-full border font-label text-xs font-bold uppercase ${dc}">${p.difficulty}</span>` : ''}
+                </div>
+                <!-- title -->
+                <h3 class="text-xl font-extrabold tracking-tight mb-3 group-hover:text-primary transition-colors duration-300">${p.title}</h3>
+                <!-- description -->
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-5 flex-1">${p.description || ''}</p>
+                <!-- tags -->
+                <div class="flex flex-wrap gap-2 mb-5">
+                    ${(p.tags || []).map(t => `<span class="px-3 py-1 bg-surface-container-highest rounded-xl text-xs font-label font-bold uppercase tracking-wider text-on-surface-variant">${t}</span>`).join('')}
+                </div>
+                <!-- footer -->
+                <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">${p.date}${p.platform ? ' · ' + p.platform : ''}</span>
+                    <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all duration-300">arrow_forward</span>
+                </div>
+            </a>`;
+            }).join('');
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                render(f === 'all' ? all : all.filter(p => p.type === f));
+            });
+        });
+
+        init();
+    </script>
+</body>
+
+</html>
