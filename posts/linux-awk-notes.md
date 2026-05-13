@@ -1,10 +1,17 @@
 # Linux AWK Scripting Notes
 
-> AWK scripting is very useful for Linux automation, string gathering, and particular pattern gathering.
+> AWK is a powerful Linux text-processing and reporting utility mainly used for:
+>
+> * Field and column extraction
+> * Log analysis
+> * Filtering data
+> * Pattern matching
+> * Automation and reporting
+> * Mathematical operations on structured text
 
 ---
 
-## Table of Contents
+# Table of Contents
 
 1. [How AWK Works](#1-how-awk-works)
 2. [AWK Terms Reference](#2-awk-terms-reference)
@@ -12,273 +19,776 @@
 4. [Searching in AWK](#4-searching-in-awk)
 5. [AWK with Delimiters](#5-awk-with-delimiters)
 6. [Built-in Functions in AWK](#6-built-in-functions-in-awk)
-7. [AWK Scripting using BEGIN and END](#7-awk-scripting-using-begin-and-end)
-8. [AWK BEGIN/END — Practical Examples](#8-awk-beginend--practical-examples)
+7. [Conditional Statements in AWK](#7-conditional-statements-in-awk)
+8. [Loops in AWK](#8-loops-in-awk)
+9. [Associative Arrays in AWK](#9-associative-arrays-in-awk)
+10. [AWK Variables](#10-awk-variables)
+11. [AWK Scripting using BEGIN and END](#11-awk-scripting-using-begin-and-end)
+12. [AWK BEGIN/END — Practical Examples](#12-awk-beginend--practical-examples)
+13. [Regular Expressions in AWK](#13-regular-expressions-in-awk)
+14. [Practical Cybersecurity / Log Analysis Examples](#14-practical-cybersecurity--log-analysis-examples)
 
 ---
 
-## 1. How AWK Works
+# 1. How AWK Works
 
 If the data looks like:
 
-```
+```text id="g0l6al"
 This is line one
 This is line two
 ```
 
-AWK considers **everything as a field** which is **space-separated**:
+AWK treats whitespace-separated values as fields:
 
-```
+```text id="frf4o4"
         $1      $2    $3     $4
-R1  |  This  |  is  | line |  one  |
-R2  |  This  |  is  | line |  two  |
+R1  |  This  |  is  | line | one |
+R2  |  This  |  is  | line | two |
 ```
 
-Each word = a **field**, each line = a **row (record)**.
+| Term   | Meaning                 |
+| ------ | ----------------------- |
+| Row    | Entire line             |
+| Field  | Individual column/value |
+| Record | Complete line           |
 
 ---
 
-## 2. AWK Terms Reference
+# 2. AWK Terms Reference
 
-| Term       | Meaning                              |
-|------------|--------------------------------------|
-| `NR`       | Number of Row (current line number)  |
-| `NF`       | Number of Fields in a row            |
-| `$0`       | Print everything (entire line)       |
-| `$1, $2…`  | Field number assignment              |
+| Term        | Meaning                         |
+| ----------- | ------------------------------- |
+| `NR`        | Current line number             |
+| `NF`        | Number of fields in current row |
+| `$0`        | Entire line                     |
+| `$1, $2...` | Particular fields               |
+| `FS`        | Input field separator           |
+| `OFS`       | Output field separator          |
+| `RS`        | Record separator                |
+| `ORS`       | Output record separator         |
 
 ---
 
-## 3. Basic AWK Commands
+# 3. Basic AWK Commands
 
-### a) Print Only a Given Column
+## a) Print Specific Column
 
-```bash
+```bash id="l6m5ng"
 awk '{ print $4 }' sample.txt
-# Prints column/field no. 4
 ```
 
-### b) Print Only the Last Column
+---
 
-```bash
+## b) Print Multiple Columns
+
+```bash id="xjzbn7"
+awk '{ print $1, $3 }' sample.txt
+```
+
+---
+
+## c) Print Last Column
+
+```bash id="uvy0gg"
 awk '{ print $NF }' sample.txt
-# $NF stores the last field value by default
 ```
 
-### e) Printing with Line Numbers
+---
 
-```bash
+## d) Print Entire Line
+
+```bash id="q5bw6f"
+awk '{ print $0 }' sample.txt
+```
+
+---
+
+## e) Print with Line Numbers
+
+```bash id="1l7sse"
 awk '{ print NR, $0 }' sample.txt
 ```
 
-### f) Print Only a Specific Line Number
+---
 
-```bash
-awk 'NR==<your-line-no.> { print $0 }' sample.txt
-# Replace <your-line-no.> with the actual line number
+## f) Print Specific Line
+
+```bash id="mubqz7"
+awk 'NR==5 { print $0 }' sample.txt
 ```
 
-### g) Print a Range of Line Numbers (e.g., Line 3 to 6)
+---
 
-```bash
-awk 'NR==3, NR==6 { print $0 }' sample.txt
+## g) Print Range of Lines
+
+```bash id="3f17lj"
+awk 'NR>=3 && NR<=6 { print $0 }' sample.txt
 ```
 
-### h) Get Line Numbers of Blank Lines
+---
 
-```bash
+## h) Print Blank Line Numbers
+
+```bash id="6e3v0q"
 awk 'NF==0 { print NR }' sample.txt
-# NF==0 means number of fields is 0 (blank line)
-```
-
-### l) Count Total Number of Lines in a File
-
-```bash
-awk 'END { print NR }' data.txt
-# After going through all lines, the END block executes
 ```
 
 ---
 
-## 4. Searching in AWK
+## i) Count Total Lines
 
-### d) Search for a Word
-
-```bash
-awk '/your_word/ { print $0 }' sample.txt
-# Place your searchable word between / ... /
+```bash id="p57kns"
+awk 'END { print NR }' sample.txt
 ```
 
-### i) Search for Multiple Words (OR logic)
+---
 
-```bash
-awk '/paul/ | /jeet/ | /hell/ { print $0 }' sample.txt
-# Example: searching for paul, jeet, or hell
+## j) Count Fields Per Line
+
+```bash id="l7n2p4"
+awk '{ print NF }' sample.txt
 ```
 
-### j) Search a Word — Ignore Case
+---
 
-```bash
+# 4. Searching in AWK
+
+## a) Search for a Word
+
+```bash id="ux4k1w"
+awk '/India/ { print $0 }' sample.txt
+```
+
+---
+
+## b) Search Multiple Words
+
+```bash id="t14kq0"
+awk '/India/ || /USA/ { print $0 }' sample.txt
+```
+
+---
+
+## c) Ignore Case While Searching
+
+```bash id="9q6byh"
 awk 'BEGIN { IGNORECASE=1 } /jeet/ { print $0 }' sample.txt
-# IGNORECASE is a built-in AWK variable
-```
-
-### k) Check if a Character is Present in a Particular Column
-
-```bash
-# Example: word = 'a', column = 2
-awk '$2 ~ /a/ { print $0 }' sample.txt
 ```
 
 ---
 
-## 5. AWK with Delimiters
+## d) Search in Particular Column
 
-### m) Use a Non-Space Delimiter (e.g., Comma)
+```bash id="5l72j5"
+awk '$2 ~ /India/ { print $0 }' sample.txt
+```
 
-```bash
+---
+
+## e) Search Using NOT Condition
+
+```bash id="1wm9ei"
+awk '!/India/ { print $0 }' sample.txt
+```
+
+---
+
+# 5. AWK with Delimiters
+
+## a) Use Comma as Delimiter
+
+```bash id="1p76nn"
 awk -F, '{ print $2 }' sample.txt
-# -F sets the field separator; here it's a comma
 ```
 
-### n) Working with Multiple Delimiters (e.g., , : -)
+---
 
-```bash
-awk -F[,:-] '{ print $2 }' sample.txt
+## b) Use Multiple Delimiters
+
+```bash id="4ff9q6"
+awk -F'[,:-]' '{ print $2 }' sample.txt
 ```
 
-### o) Print Data Between a Time Frame
+---
 
-```bash
-awk '$3 >= "01:05:55" && $3 <= "01:05:66" { print $0 }' log.txt
+## c) Change Output Delimiter
+
+```bash id="epmwlb"
+awk 'BEGIN { OFS=" | " } { print $1, $2, $3 }' sample.txt
 ```
 
-### d) Remove Delimiter (`,`) and Add Space in a CSV File
+---
 
-```bash
+## d) Remove Comma from CSV Output
+
+```bash id="5b4m6p"
 awk -F, '{ gsub(",", " "); print $0 }' sample.txt
 ```
 
-### e) Remove a Specific Character (e.g., `"`)
+---
 
-```bash
+## e) Remove Double Quotes
+
+```bash id="whqeh0"
 awk -F, '{ gsub("\"", " "); print $0 }' sample.txt
 ```
 
 ---
 
-## 6. Built-in Functions in AWK
+## f) Print Data Between Time Range
 
-### 1) Replace a Word (`gsub`)
-
-```bash
-# Replace "Hello" with "World"
-awk '{ gsub("Hello", "World") }' sample.txt
+```bash id="jr5fmu"
+awk '$3 >= "01:05:55" && $3 <= "01:10:00" { print $0 }' log.txt
 ```
 
-### 2) Get Length of a Field
+---
 
-```bash
+# 6. Built-in Functions in AWK
+
+## a) Replace Word Using `gsub()`
+
+```bash id="4dzp0k"
+awk '{ gsub("Hello", "World"); print $0 }' sample.txt
+```
+
+---
+
+## b) String Length
+
+```bash id="69nlup"
 awk '{ print length($2) }' sample.txt
-# Prints the length of field 2
 ```
 
-### 3) Index Position of a Word in a Line
+---
 
-```bash
+## c) Find Position of Word
+
+```bash id="ggoj0s"
 awk '/paul/ { print index($0, "paul") }' sample.txt
-# Finds which line 'paul' appeared in,
-# then returns the character position of "paul" in that line
-```
-
-### 4) Print a Field in Upper or Lower Case
-
-```bash
-awk '{ print toupper($5) }' sample.txt   # Uppercase
-awk '{ print tolower($5) }' sample.txt   # Lowercase
-# Replace $5 with the column number you need
 ```
 
 ---
 
-## 7. AWK Scripting using BEGIN and END
+## d) Convert to Uppercase
 
-### AWK Structure
-
-```bash
-awk 'BEGIN { ... } { print ... } END { ... }' sample.txt
-```
-
-| Block      | When it Runs              | Purpose                                        |
-|------------|---------------------------|------------------------------------------------|
-| `BEGIN { }`| Before processing any line| Variable declaration, print headers            |
-| `{ }`      | During runtime (each line)| if-else logic, print, mathematical operations  |
-| `END { }`  | After all lines processed | Print final/summary results                    |
-
----
-
-## 8. AWK BEGIN/END — Practical Examples
-
-### Sample File: `file1.txt`
-
-```
-Emp_name    dept.     Salary
-Jeet        IT        500
-Pritam      IT        600
-Prasanna    IT        600
-Kailash     IT        600
-Bishnu      IT        600
-Arpan       Medical   650
+```bash id="u8vbh5"
+awk '{ print toupper($2) }' sample.txt
 ```
 
 ---
 
-### a) Get Total Salary Given by the Company
+## e) Convert to Lowercase
 
-```bash
-awk 'BEGIN { sum=0 } { sum = sum + $NF } END { print "Total: " sum }' file1.txt
-# Salary is in the last column ($NF)
+```bash id="oqotd4"
+awk '{ print tolower($2) }' sample.txt
 ```
 
 ---
 
-### b) Get Total Number of Employees
+## f) Split String into Array
 
-```bash
-awk 'NR>1 { if ($NF > 0) count++ } END { print "Total: " count }' file.txt
-# NR>1 skips the header row
-# By default, each variable stores 0 initially
+```bash id="i0opzm"
+awk '{ split($0, arr, " "); print arr[1] }' sample.txt
 ```
 
 ---
 
-### c) Print "High" or "Low" Based on Salary Threshold (>500)
+## g) Extract Substring
 
-```bash
+```bash id="s4uvvq"
+awk '{ print substr($1,1,3) }' sample.txt
+```
+
+---
+
+# 7. Conditional Statements in AWK
+
+## a) Basic IF Condition
+
+```bash id="1n5u7g"
 awk '{ if ($NF > 500) print "High"; else print "Low" }' file.txt
 ```
 
 ---
 
-### d) Remove Comma Separator and Add Space (CSV file)
+## b) Multiple Conditions
 
-```bash
-awk -F, '{ gsub(",", " "); print $0 }' sample.txt
+```bash id="qr4l8p"
+awk '{ if ($NF > 700) print "High"; else if ($NF > 500) print "Medium"; else print "Low" }' file.txt
 ```
 
 ---
 
-### f) Print Employee Names Whose Salary is More Than 500
+## c) AND Condition
 
-```bash
-awk '{ if ($NF > 500) print $1 }' file1.txt
+```bash id="wbpkwo"
+awk '$2=="India" && $NF > 500 { print $0 }' file.txt
 ```
 
-**If names are comma-separated:**
+---
 
-```bash
-awk -F, '{ gsub(",", " "); if ($NF > 500) print $1 }' file1.txt
+## d) OR Condition
+
+```bash id="ykjlwm"
+awk '$2=="India" || $2=="USA" { print $0 }' file.txt
 ```
+
+---
+
+# 8. Loops in AWK
+
+## a) FOR Loop
+
+```bash id="o5xh6p"
+awk '{ for(i=1;i<=NF;i++) print $i }' sample.txt
+```
+
+---
+
+## b) Print All Fields with Index
+
+```bash id="v2tv6n"
+awk '{ for(i=1;i<=NF;i++) print i, $i }' sample.txt
+```
+
+---
+
+# 9. Associative Arrays in AWK
+
+> Associative arrays are one of the most powerful features of AWK.
+>
+> Unlike normal arrays:
+>
+> ```c id="8a0z0m"
+> arr[0]
+> arr[1]
+> ```
+>
+> AWK arrays can use strings as keys:
+>
+> ```awk id="knzt4u"
+> count["India"]
+> count["USA"]
+> ```
+>
+> AWK internally stores associative arrays like key-value mappings.
+
+---
+
+## Internal Concept
+
+When AWK sees:
+
+```awk id="mry8p0"
+count["India"]++
+```
+
+It internally behaves like:
+
+```text id="i8uhjr"
+India -> 1
+USA    -> 2
+```
+
+---
+
+## a) Basic Associative Array Example
+
+```bash id="hzorlj"
+awk '{ count[$1]++ } END { print count["India"] }' file.txt
+```
+
+### Example Input
+
+```text id="xbfd37"
+India
+USA
+India
+Canada
+India
+```
+
+### Output
+
+```text id="jxvnp9"
+3
+```
+
+---
+
+## Step-by-Step Understanding
+
+### Line 1
+
+```text id="y16n6g"
+India
+```
+
+Execution:
+
+```awk id="y0sk1v"
+count["India"]++
+```
+
+Now:
+
+```text id="3j17ec"
+India -> 1
+```
+
+---
+
+### Line 2
+
+```text id="vbh0ud"
+USA
+```
+
+Now:
+
+```text id="6w4h3v"
+India -> 1
+USA    -> 1
+```
+
+---
+
+### Final State
+
+```text id="1jkh2s"
+India  -> 3
+USA    -> 1
+Canada -> 1
+```
+
+---
+
+## b) Count Occurrences of Every Word
+
+```bash id="k7i5yq"
+awk '{ count[$1]++ } END { for(word in count) print word, count[word] }' file.txt
+```
+
+---
+
+## Understanding `for(i in array)`
+
+```awk id="ij25jp"
+for(i in count)
+```
+
+means:
+
+> Iterate through every key inside the associative array.
+
+---
+
+## c) Count Requests Per IP Address
+
+```bash id="7n0m5l"
+awk '{ ip[$1]++ } END { for(i in ip) print i, ip[i] }' access.log
+```
+
+---
+
+## d) Detect Brute Force Attempts
+
+```bash id="7skwx0"
+awk '{ failed[$1]++ } END { for(ip in failed) if(failed[ip] > 10) print ip }' auth.log
+```
+
+---
+
+## e) Sum Values Grouped by Key
+
+### Example: Total Salary by Department
+
+```bash id="w59h7d"
+awk '{ dept[$1] += $2 } END { for(d in dept) print d, dept[d] }' salary.txt
+```
+
+### Example Input
+
+```text id="8v5x3l"
+IT 500
+IT 600
+Medical 700
+IT 400
+```
+
+### Output
+
+```text id="8pqk17"
+IT 1500
+Medical 700
+```
+
+---
+
+## f) Check Whether Key Exists
+
+```bash id="5dbp6d"
+awk '{ seen[$1]=1 } END { if("India" in seen) print "Found" }' file.txt
+```
+
+> `in` checks whether a key exists.
+
+---
+
+## g) Delete Array Element
+
+```bash id="1jwdgv"
+awk '{ arr[$1]=$2 } END { delete arr["Jeet"] }' file.txt
+```
+
+---
+
+## Important Concepts
+
+### Arrays Auto-Initialize
+
+If key does not exist:
+
+```awk id="mlb3z9"
+count["India"]
+```
+
+AWK automatically treats it as:
+
+```awk id="l2o62o"
+0
+```
+
+So this works immediately:
+
+```awk id="jlwm5g"
+count["India"]++
+```
+
+No manual initialization needed.
+
+---
+
+## Associative Arrays Can Store Strings
+
+```bash id="it4l0q"
+awk 'BEGIN {
+    user["jeet"]="admin"
+    print user["jeet"]
+}'
+```
+
+### Output
+
+```text id="3tx8u8"
+admin
+```
+
+---
+
+## Mental Model
+
+Think of AWK associative arrays like Python dictionaries:
+
+| Python               | AWK                |
+| -------------------- | ------------------ |
+| `dict["India"] += 1` | `count["India"]++` |
+| `for k in dict:`     | `for(i in count)`  |
+
+---
+
+# 10. AWK Variables
+
+## a) User-Defined Variables
+
+```bash id="jzktn0"
+awk '{ sum = sum + $NF } END { print sum }' file.txt
+```
+
+---
+
+## b) Pass Shell Variable into AWK
+
+```bash id="yp82de"
+awk -v name="Jeet" '$1==name { print $0 }' file.txt
+```
+
+---
+
+# 11. AWK Scripting using BEGIN and END
+
+## General Structure
+
+```bash id="d0qahw"
+awk 'BEGIN { ... } { ... } END { ... }' sample.txt
+```
+
+| Block      | Purpose                      |
+| ---------- | ---------------------------- |
+| `BEGIN`    | Executes before reading file |
+| Main Block | Executes for every line      |
+| `END`      | Executes after processing    |
+
+---
+
+# 12. AWK BEGIN/END — Practical Examples
+
+## a) Calculate Total Salary
+
+```bash id="3uvl2x"
+awk 'BEGIN { sum=0 } NR>1 { sum += $NF } END { print "Total:", sum }' file.txt
+```
+
+---
+
+## b) Count Total Employees
+
+```bash id="esujwd"
+awk 'NR>1 { count++ } END { print "Employees:", count }' file.txt
+```
+
+---
+
+## c) Print Employees with Salary > 500
+
+```bash id="mj6e6c"
+awk '$NF > 500 { print $1 }' file.txt
+```
+
+---
+
+## d) Calculate Average Salary
+
+```bash id="3ty3nr"
+awk 'NR>1 { sum += $NF; count++ } END { print "Average:", sum/count }' file.txt
+```
+
+---
+
+# 13. Regular Expressions in AWK
+
+| Symbol | Meaning                  |
+| ------ | ------------------------ |
+| `^`    | Start of line            |
+| `$`    | End of line              |
+| `.`    | Any single character     |
+| `*`    | Zero or more occurrences |
+| `[]`   | Character set            |
+| `[^]`  | Negated set              |
+
+---
+
+## a) Match Start of Line
+
+```bash id="4d7qke"
+awk '/^Error/' logs.txt
+```
+
+---
+
+## b) Match End of Line
+
+```bash id="7kjlwm"
+awk '/failed$/' logs.txt
+```
+
+---
+
+## c) Match Numeric Lines
+
+```bash id="wluq78"
+awk '/^[0-9]+$/' file.txt
+```
+
+---
+
+## d) Match IP Address Pattern
+
+```bash id="1s0b41"
+awk '/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/' access.log
+```
+
+---
+
+# 14. Practical Cybersecurity / Log Analysis Examples
+
+## a) Extract Failed SSH Login Attempts
+
+```bash id="5o4k2f"
+awk '/Failed password/ { print $0 }' auth.log
+```
+
+---
+
+## b) Print Source IPs
+
+```bash id="d3r4ht"
+awk '{ print $1 }' access.log
+```
+
+---
+
+## c) Count Requests Per IP
+
+```bash id="fq2u8l"
+awk '{ count[$1]++ } END { for(ip in count) print ip, count[ip] }' access.log
+```
+
+---
+
+## d) Detect Possible Brute Force Attempts
+
+```bash id="8g8efj"
+awk '{ count[$1]++ } END { for(ip in count) if(count[ip] > 10) print ip }' auth.log
+```
+
+---
+
+## e) Extract HTTP Status Codes
+
+```bash id="ifjlwm"
+awk '{ print $9 }' access.log
+```
+
+---
+
+## f) Extract URLs Returning 500 Errors
+
+```bash id="5dftxm"
+awk '$9==500 { print $7 }' access.log
+```
+
+---
+
+## g) Remove Empty IOC Lines
+
+```bash id="l7m6tv"
+awk 'NF > 0' iocs.txt
+```
+
+---
+
+## h) Find Suspicious PowerShell Commands
+
+```bash id="wbo7i7"
+awk '/powershell/ || /EncodedCommand/' windows_logs.txt
+```
+
+---
+
+# Notes
+
+* AWK is field-oriented.
+* Default delimiter is whitespace.
+* `-F` changes input delimiter.
+* `NR` = current line number.
+* `NF` = number of fields.
+* `$NF` = last field.
+* `BEGIN` and `END` are special blocks.
+* `gsub()` performs global substitution.
+* `~` is used for regex matching.
+* Associative arrays are key-value based structures.
 
 ---
 
