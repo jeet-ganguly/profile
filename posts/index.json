@@ -11,7 +11,7 @@
   {
     "slug":        "linux-awk-notes",
     "title":       "Linux AWK — Notes",
-    "date":        "2026-05-11",
+    "date":        "2026-05-12",
     "type":        "notes",
     "platform":    "Linux",
     "description": "Linux notes on AWK scripting",
@@ -20,11 +20,20 @@
   {
     "slug":        "linux-sed-notes",
     "title":       "Linux SED — Notes",
-    "date":        "2026-05-11",
+    "date":        "2026-05-12",
     "type":        "notes",
     "platform":    "Linux",
     "description": "Linux notes on SED scripting",
     "tags":        ["linux","SED"]
+  },
+  {
+    "slug":        "linux-task-scheduling",
+    "title":       "Linux task scheduling — Notes",
+    "date":        "2026-05-14",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on task scheduling",
+    "tags":        ["linux","cronjob","at"]
   },
   {
     "slug":        "osint-methodology",
