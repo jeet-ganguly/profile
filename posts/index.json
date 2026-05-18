@@ -1,5 +1,32 @@
 [
   {
+    "slug":        "linux-user-group-special-perm-notes",
+    "title":       "Linux user-group management — Notes",
+    "date":        "2026-05-18",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on user-group management",
+    "tags":        ["linux","users","groups","sysadmin","suid","sgid","sticky bit"]
+  },
+  {
+    "slug":        "linux-networking-notes",
+    "title":       "Linux networking — Notes",
+    "date":        "2026-05-18",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on networking",
+    "tags":        ["linux","ping","netstat","networking","traceroute"]
+  },
+  {
+    "slug":        "linux-task-scheduling",
+    "title":       "Linux task scheduling — Notes",
+    "date":        "2026-05-14",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on task scheduling",
+    "tags":        ["linux","cronjob","at"]
+  },
+  {
     "slug":        "linux-sysadmin-notes",
     "title":       "Linux SYSADMIN — Notes",
     "date":        "2026-05-11",
@@ -25,15 +52,6 @@
     "platform":    "Linux",
     "description": "Linux notes on SED scripting",
     "tags":        ["linux","SED"]
-  },
-  {
-    "slug":        "linux-task-scheduling",
-    "title":       "Linux task scheduling — Notes",
-    "date":        "2026-05-14",
-    "type":        "notes",
-    "platform":    "Linux",
-    "description": "Linux notes on task scheduling",
-    "tags":        ["linux","cronjob","at"]
   },
   {
     "slug":        "osint-methodology",
