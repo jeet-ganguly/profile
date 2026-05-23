@@ -1,5 +1,13 @@
 [
   {
+    "slug":        "terrier-quest-ctf-2025",
+    "title":       "CTF Writeup - Indian Army Terrier Cyber Quest 2025",
+    "date":        "2026-05-23",
+    "type":        "ctf",
+    "description": "Last 2 PWN challenge of Indian Army Terrier Cyber Quest CTF 2025 Qualifiers",
+    "tags":        ["CTF","PWN", "ROP", "RET2WIN", "RET2LIBC"]
+  },
+  {
     "slug":        "email-investigation",
     "title":       "OSINT - Email Attribution Investigation Write-up",
     "date":        "2026-05-23",
