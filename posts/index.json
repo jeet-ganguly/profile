@@ -1,5 +1,22 @@
 [
   {
+    "slug":        "email-investigation",
+    "title":       "OSINT - Email Attribution Investigation Write-up",
+    "date":        "2026-05-23",
+    "type":        "osint",
+    "description": "A structured approach Email Attribution Investigation using OSINT",
+    "tags":        ["osint", "socmint", "email-osint", "email"]
+  },
+   {
+    "slug":        "linux-firewall-notes",
+    "title":       "Linux firewall management — Notes",
+    "date":        "2026-05-23",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on firewall management",
+    "tags":        ["linux","firewall","iptables","security"]
+  },
+  {
     "slug":        "linux-user-group-special-perm-notes",
     "title":       "Linux user-group management — Notes",
     "date":        "2026-05-18",
