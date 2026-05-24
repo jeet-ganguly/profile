@@ -1,5 +1,41 @@
 [
   {
+    "slug":        "linux-daily-useful-notes",
+    "title":       "Linux Daily Useful Commands - Notes",
+    "date":        "2026-05-24",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on Daily Useful Commands",
+    "tags":        ["linux","daily","one-shot"]
+  },
+  {
+    "slug":        "linux-cli-essential-notes",
+    "title":       "Linux Command Line Essentials: Search, Compression, Environment Variables & Redirection - Notes",
+    "date":        "2026-05-24",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on Search, Compression, Environment Variables & Redirection",
+    "tags":        ["linux","find","grep","tar"]
+  },
+  {
+    "slug":        "linux-sytem-calls-notes",
+    "title":       "Linux System Calls Tracing - Notes",
+    "date":        "2026-05-24",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on System Calls Tracing",
+    "tags":        ["linux","process","syscalls","systemcalls","strace","ltrace","ptrace"]
+  },
+  {
+    "slug":        "linux-process-memory-notes",
+    "title":       "Linux Process Memory Maps & File Descriptors - Notes",
+    "date":        "2026-05-24",
+    "type":        "notes",
+    "platform":    "Linux",
+    "description": "Linux notes on Process memory and file descriptors",
+    "tags":        ["linux","process","process","fd","file descriptors"]
+  },
+  {
     "slug":        "terrier-quest-ctf-2025",
     "title":       "CTF Writeup - Indian Army Terrier Cyber Quest 2025",
     "date":        "2026-05-23",
