@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-osi-notes",
+    "title":       "Computer Networking OSI Model - Notes",
+    "date":        "2026-05-26",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on OSI model. Brief explanations of 7 layers in OSI model.",
+    "tags":        ["CN","Networking","Computer Networking","OSI","7 layers"]
+  },
+  {
     "slug":        "linux-daily-useful-notes",
     "title":       "Linux Daily Useful Commands - Notes",
     "date":        "2026-05-24",
