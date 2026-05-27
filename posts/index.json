@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-tcp-ip-notes",
+    "title":       "Computer Networking TCP/IP Stack - Notes",
+    "date":        "2026-05-27",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on TCP/IP stack. Brief explanations of 5 layers in TCP/IP Stack.",
+    "tags":        ["CN","Networking","Computer Networking","TCP/IP","5 layers"]
+  },
+  {
     "slug":        "cn-osi-notes",
     "title":       "Computer Networking OSI Model - Notes",
     "date":        "2026-05-26",
