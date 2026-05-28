@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-data-link-notes",
+    "title":       "Computer Networking Data Link Layer - Notes",
+    "date":        "2026-05-28",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on Data Link Layer. Detail Explanation of Data Link Layer, MAC, CRC, CSMA/CD, CSMA/CA",
+    "tags":        ["CN","Networking","Computer Networking","Data link","layer 2","MAC","CSMA","CRC","LLC","Switch"]
+  },
+  {
     "slug":        "cn-tcp-ip-notes",
     "title":       "Computer Networking TCP/IP Stack - Notes",
     "date":        "2026-05-27",
