@@ -1,4 +1,13 @@
 [
+   {
+    "slug":        "cn-network-layer-notes",
+    "title":       "Computer Networking Network Layer - Notes",
+    "date":        "2026-05-28",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on Network Layer. Brief explanation of Ntwork Layer IP addressing, routing",
+    "tags":        ["CN","Networking","Computer Networking","Network Layer","layer 3","IP","router"]
+  },
   {
     "slug":        "cn-data-link-notes",
     "title":       "Computer Networking Data Link Layer - Notes",
