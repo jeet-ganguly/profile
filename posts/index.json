@@ -1,5 +1,13 @@
 [
   {
+    "slug":        "iaip-2025-ctf",
+    "title":       "CTF Writeup - Indian Army Internship 2025 Round 1",
+    "date":        "2026-05-30",
+    "type":        "ctf",
+    "description": "Round 1 challenge from the Security Research Intern selection process of the Indian Army Internship Programme 2025. The machine required a complete boot-to-root compromise through web exploitation, privilege escalation, password cracking, and reverse engineering.",
+    "tags":        ["CTF","PWN", "boot2root", "linux pwn", "vm","SUID","sqli","password cracking"]
+  },
+  {
     "slug":        "cn-ip-addressing-notes",
     "title":       "Computer Networking IP Addressing - Notes",
     "date":        "2026-05-29",

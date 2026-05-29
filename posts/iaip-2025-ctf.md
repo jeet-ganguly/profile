@@ -73,9 +73,10 @@ sudo netdiscover
 
 ### Screenshot
 
-```text
-images/netdiscover.png
-```
+<p align="center">
+<img src="images/netdiscover.png" width="900">
+</p>
+
 
 Discovered Target:
 
@@ -108,9 +109,9 @@ nmap -sT -A -vv -p- 192.168.0.106
 
 ### Screenshot
 
-```text
-images/nmap.png
-```
+<p align="center">
+<img src="images/nmap.png" width="900">
+</p>
 
 ### Results
 
@@ -142,9 +143,9 @@ Technology fingerprinting was performed using Wappalyzer.
 
 ### Screenshot
 
-```text
-images/wappalyzer.png
-```
+<p align="center">
+<img src="images/wappalyzer.png" width="900">
+</p>
 
 ### Findings
 
@@ -178,9 +179,9 @@ ffuf -w directory-list-2.3-small.txt:FUZZ \
 
 ### Screenshot
 
-```text
-images/ffuf.png
-```
+<p align="center">
+<img src="images/ffuf.png" width="900">
+</p>
 
 ### Discovered Endpoints
 
@@ -195,10 +196,13 @@ However, the `/admin/` endpoint exposed an administrative login panel.
 
 ### Screenshots
 
-```text
-images/admin_login.png
-images/assets_directory.png
-```
+<p align="center">
+<img src="images/admin_login.png" width="900">
+</p>
+
+<p align="center">
+<img src="images/assets_directory.png" width="900">
+</p>
 
 ---
 
@@ -221,9 +225,9 @@ Password Field
 
 ### Screenshot
 
-```text
-images/sqli_login.png
-```
+<p align="center">
+<img src="images/sqli_login.png" width="900">
+</p>
 
 Authentication was bypassed successfully, resulting in administrative access.
 
@@ -251,9 +255,9 @@ After successful authentication, the Profile Settings page allowed profile image
 
 ### Screenshot
 
-```text
-images/profile_upload_before.png
-```
+<p align="center">
+<img src="images/profile_upload_before.png" width="900">
+</p>
 
 No server-side file validation was implemented.
 
@@ -271,9 +275,9 @@ PentestMonkey PHP Reverse Shell
 
 ### Screenshot
 
-```text
-images/profile_upload_after.png
-```
+<p align="center">
+<img src="images/profile_upload_after.png" width="900">
+</p>
 
 The upload succeeded successfully.
 
@@ -293,9 +297,9 @@ ffuf -w directory-list-2.3-small.txt:FUZZ \
 
 ### Screenshot
 
-```text
-images/ffuf_admin.png
-```
+<p align="center">
+<img src="images/ffuf_admin.png" width="900">
+</p>
 
 Discovered Endpoint:
 
@@ -319,9 +323,9 @@ A reverse shell was obtained.
 
 ### Screenshot
 
-```text
-images/reverse_shell.png
-```
+<p align="center">
+<img src="images/reverse_shell.png" width="900">
+</p>
 
 To obtain a fully interactive shell:
 
@@ -349,9 +353,9 @@ linpeas.sh
 
 ### Screenshot
 
-```text
-images/linpeas_execution.png
-```
+<p align="center">
+<img src="images/linpeas_execution.png" width="900">
+</p>
 
 Interesting Finding:
 
@@ -369,9 +373,9 @@ A private SSH key belonging to John was discovered.
 
 ### Screenshot
 
-```text
-images/john_private_key_found.png
-```
+<p align="center">
+<img src="images/john_private_key_found.png" width="900">
+</p>
 
 To transfer the key to the attacking machine, a temporary HTTP server was created.
 
@@ -401,9 +405,9 @@ ssh john@192.168.0.106 -i john_private_key
 
 ### Screenshot
 
-```text
-images/john_ssh_login.png
-```
+<p align="center">
+<img src="images/john_ssh_login.png" width="900">
+</p>
 
 Successfully authenticated as:
 
@@ -441,9 +445,9 @@ Directory:
 
 ### Screenshot
 
-```text
-images/linpeas_backup_directory.png
-```
+<p align="center">
+<img src="images/linpeas_backup_directory.png" width="900">
+</p>
 
 Inside:
 
@@ -453,9 +457,9 @@ backup.zip
 
 ### Screenshot
 
-```text
-images/backup_zip.png
-```
+<p align="center">
+<img src="images/backup_zip.png" width="900">
+</p>
 
 The ZIP archive was password protected.
 
@@ -483,9 +487,9 @@ john --show hash
 
 ### Screenshot
 
-```text
-images/john_crack_zip.png
-```
+<p align="center">
+<img src="images/john_crack_zip.png" width="900">
+</p>
 
 Recovered Password:
 
@@ -507,9 +511,9 @@ admin : QuvXmdLZx
 
 ### Screenshot
 
-```text
-images/admin_password_file.png
-```
+<p align="center">
+<img src="images/admin_password_file.png" width="900">
+</p>
 
 ---
 
@@ -529,9 +533,9 @@ QuvXmdLZx
 
 ### Screenshot
 
-```text
-images/admin-login.png
-```
+<p align="center">
+<img src="images/admin-login.png" width="900">
+</p>
 
 Successfully authenticated as:
 
@@ -569,9 +573,9 @@ find / -type f -perm -4000 2>/dev/null
 
 ### Screenshot
 
-```text
-images/suid_enumeration.png
-```
+<p align="center">
+<img src="images/suid_enumeration.png" width="900">
+</p>
 
 Interesting Binary:
 
@@ -600,9 +604,9 @@ strings /usr/local/bin/hydra_key
 
 ### Screenshot
 
-```text
-images/strings_hydra_key.png
-```
+<p align="center">
+<img src="images/strings_hydra_key.png" width="900">
+</p>
 
 Observation:
 
@@ -615,10 +619,13 @@ Static analysis was performed using IDA.
 
 ### Screenshot
 
-```text
-images/ida_main.png
-images/ida_decode_function.png
-```
+<p align="center">
+<img src="images/ida_main.png" width="900">
+</p>
+
+<p align="center">
+<img src="images/ida_decode_function.png" width="900">
+</p>
 
 The decode function referenced a global variable:
 
@@ -640,9 +647,9 @@ objdump -s -j .data ./hydra_key
 
 ### Screenshot
 
-```text
-images/objdump_data.png
-```
+<p align="center">
+<img src="images/objdump_data.png" width="900">
+</p>
 
 Recovered Data:
 
@@ -704,11 +711,9 @@ secret!
 
 ### Screenshot
 
-```text
-images/password_decoded.png
-```
-
----
+<p align="center">
+<img src="images/password_decoded.png" width="900">
+</p>
 
 ## Obtaining Root Shell
 
@@ -728,9 +733,9 @@ The program spawned a root shell.
 
 ### Screenshot
 
-```text
-images/root-shell.png
-```
+<p align="center">
+<img src="images/root-shell.png" width="900">
+</p>
 
 Current User:
 
