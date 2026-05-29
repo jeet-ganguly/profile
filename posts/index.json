@@ -1,8 +1,17 @@
 [
-   {
+  {
+    "slug":        "cn-ip-addressing-notes",
+    "title":       "Computer Networking IP Addressing - Notes",
+    "date":        "2026-05-29",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on IP adressing. Detail explanation of IP addressing, classes, v4, v6 etc.",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv4","IPv6"]
+  },
+  {
     "slug":        "cn-network-layer-notes",
     "title":       "Computer Networking Network Layer - Notes",
-    "date":        "2026-05-28",
+    "date":        "2026-05-29",
     "type":        "notes",
     "platform":    "Computer Networking",
     "description": "Computer Networking notes on Network Layer. Brief explanation of Ntwork Layer IP addressing, routing",
