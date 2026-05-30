@@ -482,6 +482,9 @@ Not used in normal communication
 | D     | 224-239 | Multicast     | N/A  | N/A               |
 | E     | 240-255 | Experimental  | N/A  | N/A               |
 
+```text
+If you convert all 1 in binary of Network Portion Then you get subnet mask of that particular class.
+```
 ---
 
 ## Why Classful Addressing Was Replaced
