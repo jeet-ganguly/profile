@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-ipv4-subnetting-notes",
+    "title":       "Computer Networking IPv4 Subnetting - Notes",
+    "date":        "2026-06-2",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on IPv4 Subnetting. And details about why subnetting required in IT infra, Numericals how to divide subnets from an IP based on your requirement",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv4","subnetting","ipv4 subnetting","subnets"]
+  },
+  {
     "slug":        "cn-ipv4-header-notes",
     "title":       "Computer Networking IPv4 Header - Notes",
     "date":        "2026-05-31",
