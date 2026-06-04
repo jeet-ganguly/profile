@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-ipv6-comp-notes",
+    "title":       "Computer Networking Compression of IPv6 Addresses - Notes",
+    "date":        "2026-06-4",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on IPv6 address compression. It is important to represent big IPv6 in short format.",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","IPv6 Address Compression"]
+  },
+  {
     "slug":        "cn-ipv6-notes",
     "title":       "Computer Networking IPv6 - Notes",
     "date":        "2026-06-4",
