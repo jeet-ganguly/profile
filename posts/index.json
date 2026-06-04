@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-ipv6-notes",
+    "title":       "Computer Networking IPv6 - Notes",
+    "date":        "2026-06-4",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on IPv6. And details about why IPv6 required in IT infra",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6"]
+  },
+  {
     "slug":        "cn-ipv4-subnetting-notes",
     "title":       "Computer Networking IPv4 Subnetting - Notes",
     "date":        "2026-06-2",
