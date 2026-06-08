@@ -7,3 +7,5 @@ Currently full linux notes added and curently working on networking (with subnet
 2 ctf writeup covered
 
 and 1 osint investigation writeup covered
+
+osint methods will come soon
