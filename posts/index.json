@@ -1,8 +1,17 @@
 [
   {
+    "slug":        "cn-types-of-ipv6",
+    "title":       "Computer Networking - Type of IPv6 Addresses - Notes",
+    "date":        "2026-06-10",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on types of IPv6 address. Here we add unicast, multicast, anycast addresses in IPv6",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","unicast","anycast","multicast"]
+  },
+  {
     "slug":        "cn-ipv6-comp-notes",
-    "title":       "Computer Networking Compression of IPv6 Addresses - Notes",
-    "date":        "2026-06-4",
+    "title":       "Computer Networking - Compression of IPv6 Addresses - Notes",
+    "date":        "2026-06-04",
     "type":        "notes",
     "platform":    "Computer Networking",
     "description": "Computer Networking notes on IPv6 address compression. It is important to represent big IPv6 in short format.",
@@ -11,7 +20,7 @@
   {
     "slug":        "cn-ipv6-notes",
     "title":       "Computer Networking IPv6 - Notes",
-    "date":        "2026-06-4",
+    "date":        "2026-06-04",
     "type":        "notes",
     "platform":    "Computer Networking",
     "description": "Computer Networking notes on IPv6. And details about why IPv6 required in IT infra",
@@ -20,7 +29,7 @@
   {
     "slug":        "cn-ipv4-subnetting-notes",
     "title":       "Computer Networking IPv4 Subnetting - Notes",
-    "date":        "2026-06-2",
+    "date":        "2026-06-02",
     "type":        "notes",
     "platform":    "Computer Networking",
     "description": "Computer Networking notes on IPv4 Subnetting. And details about why subnetting required in IT infra, Numericals how to divide subnets from an IP based on your requirement",
