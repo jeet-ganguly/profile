@@ -1,11 +1,20 @@
 [
   {
+    "slug":        "cn-interface-id",
+    "title":       "Computer Networking - Interface ID generation in IPv6 - Notes",
+    "date":        "2026-06-10",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on generating Interface ID in IPv6. Here I added type of methods how Interface ID generates.",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","EUI-64","Interface ID"]
+  },
+  {
     "slug":        "cn-types-of-unicast",
     "title":       "Computer Networking - Type of Unicast Address in IPv6 - Notes",
     "date":        "2026-06-10",
     "type":        "notes",
     "platform":    "Computer Networking",
-    "description": "Computer Networking notes on types of Unicast address in IPv6. Here we add link local, Unique local, global unicast etc. addresses in IPv6",
+    "description": "Computer Networking notes on types of Unicast address in IPv6. Here I added link local, Unique local, global unicast etc. addresses in IPv6",
     "tags":        ["CN","Networking","Computer Networking","IP","IPv6","unicast","link-local","unique local"]
   },
   {
@@ -14,7 +23,7 @@
     "date":        "2026-06-10",
     "type":        "notes",
     "platform":    "Computer Networking",
-    "description": "Computer Networking notes on types of IPv6 address. Here we add unicast, multicast, anycast addresses in IPv6",
+    "description": "Computer Networking notes on types of IPv6 address. Here I added unicast, multicast, anycast addresses in IPv6",
     "tags":        ["CN","Networking","Computer Networking","IP","IPv6","unicast","anycast","multicast"]
   },
   {
