@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-types-of-unicast",
+    "title":       "Computer Networking - Type of Unicast Address in IPv6 - Notes",
+    "date":        "2026-06-10",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on types of Unicast address in IPv6. Here we add link local, Unique local, global unicast etc. addresses in IPv6",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","unicast","link-local","unique local"]
+  },
+  {
     "slug":        "cn-types-of-ipv6",
     "title":       "Computer Networking - Type of IPv6 Addresses - Notes",
     "date":        "2026-06-10",
