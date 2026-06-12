@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-ipv6-header",
+    "title":       "Computer Networking - IPv6 Header - Notes",
+    "date":        "2026-06-12",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on header of IPv6. And details about each options in header.",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","header","ipv6-header"]
+  },
+  {
     "slug":        "cn-ipv6-transition",
     "title":       "Computer Networking - Transition Mechanism of IPv6 - Notes",
     "date":        "2026-06-12",
