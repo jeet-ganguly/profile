@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-ipv6-transition",
+    "title":       "Computer Networking - Transition Mechanism of IPv6 - Notes",
+    "date":        "2026-06-12",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on mechanism of transition in IPv6. Here I added type of methods how IPv6 transition works.",
+    "tags":        ["CN","Networking","Computer Networking","IP","IPv6","dual-stack","nat64"]
+  },
+  {
     "slug":        "cn-interface-id",
     "title":       "Computer Networking - Interface ID generation in IPv6 - Notes",
     "date":        "2026-06-10",
