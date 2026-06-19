@@ -1,4 +1,13 @@
 [
+    {
+    "slug":        "cn-transport-layer",
+    "title":       "Computer Networking - Overview of Transport Layer - Notes",
+    "date":        "2026-06-19",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on overview of Transport Layer.",
+    "tags":        ["CN","Networking","Computer Networking","port","Port Number","transport layer","layer4"]
+  },
   {
     "slug":        "cn-ipv6-header",
     "title":       "Computer Networking - IPv6 Header - Notes",
