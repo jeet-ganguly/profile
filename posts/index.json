@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-tcp-header",
+    "title":       "Computer Networking - TCP Header - Notes",
+    "date":        "2026-06-19",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on TCP header.",
+    "tags":        ["CN","Networking","Computer Networking","tcp","tcp header","mss","mtu"]
+  },
+  {
     "slug":        "cn-transport-layer",
     "title":       "Computer Networking - Overview of Transport Layer - Notes",
     "date":        "2026-06-19",

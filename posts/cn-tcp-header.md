@@ -40,9 +40,10 @@ These notes cover:
 * [12. Checksum](#12-checksum)
 * [13. Urgent Pointer](#13-urgent-pointer)
 * [14. Options Field](#14-options-field)
-* [15. MSS (Maximum Segment Size)](#15-mss-maximum-segment-size)
-* [16. Cybersecurity Perspective](#16-cybersecurity-perspective)
-* [17. Quick Revision Sheet](#17-quick-revision-sheet)
+* [15. MTU (Maximum Transmission Unit)](#15-mtu-maximum-transmission-unit)
+* [16. MSS (Maximum Segment Size)](#16-mss-maximum-segment-size)
+* [17. Cybersecurity Perspective](#17-cybersecurity-perspective)
+* [18. Quick Revision Sheet](#18-quick-revision-sheet)
 
 ---
 
@@ -619,9 +620,171 @@ Common Options:
 
 ---
 
-# 15. MSS (Maximum Segment Size)
+# 15. MTU (Maximum Transmission Unit)
 
-MSS means:
+MTU stands for:
+
+```text
+Maximum Transmission Unit
+```
+
+It represents:
+
+```text
+Maximum size of an entire packet
+that can be transmitted over
+a network medium without fragmentation.
+```
+
+---
+
+## Why MTU is Needed?
+
+Different network technologies have different packet size limits.
+
+Examples:
+
+| Technology | MTU        |
+| ---------- | ---------- |
+| Ethernet   | 1500 Bytes |
+| PPPoE      | 1492 Bytes |
+| FDDI       | 4352 Bytes |
+| Token Ring | 4464 Bytes |
+
+---
+
+## Ethernet MTU
+
+Most Ethernet networks use:
+
+```text
+MTU = 1500 Bytes
+```
+
+This includes:
+
+```text
+IP Header
++
+TCP Header
++
+Application Data
+```
+
+---
+
+## Example
+
+Suppose:
+
+```text
+IP Header = 20 Bytes
+
+TCP Header = 20 Bytes
+
+Application Data = 1460 Bytes
+```
+
+Total packet size:
+
+```text
+20 + 20 + 1460
+
+= 1500 Bytes
+```
+
+which exactly matches Ethernet MTU.
+
+---
+
+## What Happens if Packet Size Exceeds MTU?
+
+Suppose:
+
+```text
+Packet Size = 2000 Bytes
+```
+
+but network MTU is:
+
+```text
+1500 Bytes
+```
+
+Then:
+
+```text
+Packet
+     ↓
+Fragmentation
+     ↓
+Two Smaller Packets
+```
+
+may occur.
+
+---
+
+## Problems Caused by Fragmentation
+
+* Increased overhead
+* Reduced performance
+* Packet loss
+* Higher latency
+
+Therefore:
+
+```text
+Networks try to avoid fragmentation
+whenever possible.
+```
+
+---
+
+## Path MTU Discovery (PMTUD)
+
+Path MTU Discovery determines:
+
+```text
+Smallest MTU
+along the entire route
+```
+
+between sender and receiver.
+
+Purpose:
+
+```text
+Avoid Fragmentation
+```
+
+---
+
+## Example
+
+Suppose route contains:
+
+```text
+Router 1 → MTU 1500
+
+Router 2 → MTU 1400
+
+Router 3 → MTU 1300
+```
+
+Effective MTU becomes:
+
+```text
+1300 Bytes
+```
+
+because it is the smallest MTU on the path.
+
+---
+
+# 16. MSS (Maximum Segment Size)
+
+MSS stands for:
 
 ```text
 Maximum Segment Size
@@ -631,8 +794,22 @@ It represents:
 
 ```text
 Maximum amount of
-application data
-inside a TCP segment
+Application Data
+inside a TCP segment.
+```
+
+---
+
+## Relationship Between MTU and MSS
+
+```text
+MTU
+│
+├── IP Header
+│
+├── TCP Header
+│
+└── Application Data (MSS)
 ```
 
 ---
@@ -643,10 +820,14 @@ inside a TCP segment
 MSS = MTU - IP Header - TCP Header
 ```
 
-For Ethernet:
+---
+
+## Example (IPv4)
+
+Ethernet MTU:
 
 ```text
-MTU = 1500 Bytes
+1500 Bytes
 ```
 
 IPv4 Header:
@@ -671,19 +852,62 @@ MSS = 1500 - 20 - 20
 
 ---
 
-## Why Needed?
+## Example (IPv6)
 
-To avoid:
+Ethernet MTU:
 
-* Fragmentation
-* Packet Loss
-* Inefficient Transmission
+```text
+1500 Bytes
+```
+
+IPv6 Header:
+
+```text
+40 Bytes
+```
+
+TCP Header:
+
+```text
+20 Bytes
+```
+
+Therefore:
+
+```text
+MSS = 1500 - 40 - 20
+
+= 1440 Bytes
+```
 
 ---
 
-# 16. Cybersecurity Perspective
+## Why MSS is Needed?
+
+MSS helps:
+
+* Avoid Fragmentation
+* Improve Performance
+* Reduce Packet Loss
+* Increase Transmission Efficiency
 
 ---
+
+## Memory Trick
+
+```text
+MTU
+=
+Entire Packet Size
+
+MSS
+=
+Only Application Data
+```
+
+---
+
+# 17. Cybersecurity Perspective
 
 ## SYN Flood Attack
 
@@ -727,27 +951,13 @@ and inject malicious packets.
 
 ---
 
-## ACK Scan
+## Fragmentation Attacks
 
-Nmap uses:
+Improper handling of fragmented packets may allow attackers to:
 
-```text
-ACK Packets
-```
-
-to analyze firewall rules.
-
----
-
-## FIN Scan
-
-Attackers use:
-
-```text
-FIN Packets
-```
-
-to evade packet filters.
+* Evade IDS/IPS
+* Bypass Firewalls
+* Hide Malicious Payloads
 
 ---
 
@@ -758,10 +968,12 @@ to evade packet filters.
 * Sequence Number
 * Flags
 * Window Size
+* MSS
+* MTU
 
 ---
 
-# 17. Quick Revision Sheet
+# 18. Quick Revision Sheet
 
 Header Size:
 
@@ -811,28 +1023,34 @@ URG
 
 ---
 
-MSS Formula:
+MTU:
 
 ```text
-MSS
-
-=
-
-MTU - IP Header - TCP Header
+Entire Packet Size
 ```
 
 ---
 
-Most Important Functions:
+MSS:
 
 ```text
-Reliable Delivery
+Application Data Size
+```
 
-Flow Control
+---
 
-Error Detection
+IPv4 MSS:
 
-Connection Management
+```text
+1460 Bytes
+```
+
+---
+
+IPv6 MSS:
+
+```text
+1440 Bytes
 ```
 
 ---
@@ -840,10 +1058,11 @@ Connection Management
 Biggest Concept:
 
 ```text
-TCP Header provides
-reliable, ordered, and
-connection-oriented
-communication between hosts.
+MTU limits the size of
+the whole packet.
+
+MSS limits the size of
+the TCP payload.
 ```
 
 ---
