@@ -1,12 +1,21 @@
 [
   {
+    "slug":        "cn-tcp-conn-ter",
+    "title":       "Computer Networking - TCP Connection Termination - Notes",
+    "date":        "2026-06-23",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on TCP Connection Termination.",
+    "tags":        ["CN","Networking","Computer Networking","tcp","tcp connection","4-way handshake","handshake","fin","ack","fin","ack"]
+  },
+  {
     "slug":        "cn-tcp-conn-est",
     "title":       "Computer Networking - TCP Connection Establishments - Notes",
     "date":        "2026-06-23",
     "type":        "notes",
     "platform":    "Computer Networking",
     "description": "Computer Networking notes on TCP Connection Establishment.",
-    "tags":        ["CN","Networking","Computer Networking","tcp","tcp connection","3-way handshake","syn","syn+ack","ack"]
+    "tags":        ["CN","Networking","Computer Networking","tcp","tcp connection","3-way handshake","handshake","syn","syn+ack","ack"]
   },
   {
     "slug":        "cn-tcp-header",
