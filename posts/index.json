@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-tcp-error",
+    "title":       "Computer Networking - TCP Connection Error - Notes",
+    "date":        "2026-06-24",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on TCP Connection Error.",
+    "tags":        ["CN","Networking","Computer Networking","tcp","tcp error","error control"]
+  },
+  {
     "slug":        "cn-tcp-conn-ter",
     "title":       "Computer Networking - TCP Connection Termination - Notes",
     "date":        "2026-06-24",
