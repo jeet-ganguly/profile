@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "linux-cut-tr",
+    "title":       "Linux cut & tr for text processing - Notes",
+    "date":        "2026-06-26",
+    "type":        "notes",
+    "platform":    "linux",
+    "description": "Linux notes on text processing with cut & tr.",
+    "tags":        ["Linux","tr","cut","text processing"]
+  },
+  {
     "slug":        "cn-tcp-error",
     "title":       "Computer Networking - TCP Connection Error - Notes",
     "date":        "2026-06-24",
