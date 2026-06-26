@@ -6,7 +6,7 @@
     "type":        "notes",
     "platform":    "linux",
     "description": "Linux notes on text processing with cut & tr.",
-    "tags":        ["Linux","tr","cut","text processing"]
+    "tags":        ["Linux","tr","cut","text processing","cuts of","translate"]
   },
   {
     "slug":        "cn-tcp-error",
