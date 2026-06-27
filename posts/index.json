@@ -1,12 +1,21 @@
 [
   {
+    "slug":        "ig-part3",
+    "title":       "WEB Information Gathering - Virtual Host Enumeration & Fingerprinting",
+    "date":        "2026-06-28",
+    "type":        "tools",
+    "platform":    "gobuster, wappalyzer, wafw00f, nikto, curl",
+    "description": "Here in this section we learn how to gather important info through Virtual Host Enumeration and Fingerprinting for Web app pentesting",
+    "tags":        ["gobuster","wappalyzer","wafw00f","nikto","curl","web requsts","recon","information gathering","web enum","web recon"]
+  },
+  {
     "slug":        "ig-part2",
     "title":       "WEB Information Gathering - Subdomain Enumeration",
     "date":        "2026-06-28",
     "type":        "tools",
     "platform":    "DNSENUM, Wayback Machine",
     "description": "Here in this section we learn how to gather important info through Subdomin Enumeration for Web app pentesting",
-    "tags":        ["dnenum","wayback machine","wayback","web requsts","recon","information gathering","web enum","web recon"]
+    "tags":        ["dnsenum","wayback machine","wayback","web requests","recon","information gathering","web enum","web recon"]
   },
   {
     "slug":        "ig-part1",
@@ -15,7 +24,7 @@
     "type":        "tools",
     "platform":    "whois,dig",
     "description": "Here in this section we learn how to gather important info through DNS Enumeration for Web app pentesting",
-    "tags":        ["dig","whois","web requsts","recon","information gathering","web enum","web recon"]
+    "tags":        ["dig","whois","web reqeusts","recon","information gathering","web enum","web recon"]
   },
   {
     "slug":        "curl-notes",
