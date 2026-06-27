@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "ig-part4",
+    "title":       "WEB Information Gathering - WEB Crawling and Automation",
+    "date":        "2026-06-28",
+    "type":        "tools",
+    "platform":    "reconspider, scrapy",
+    "description": "Here in this section we learn how to gather important info through WEB crawling and automation for Web app pentesting",
+    "tags":        ["reconspider","scrapy","web requsts","recon","information gathering","web enum","web recon"]
+  },
+  {
     "slug":        "ig-part3",
     "title":       "WEB Information Gathering - Virtual Host Enumeration & Fingerprinting",
     "date":        "2026-06-28",
