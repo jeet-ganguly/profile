@@ -1,12 +1,21 @@
 [
   {
+    "slug":        "ig-part1",
+    "title":       "WEB Information Gathering - DNS Enumeration",
+    "date":        "2026-06-28",
+    "type":        "tools",
+    "platform":    "whois,dig",
+    "description": "Here in this section we learn how to gather important info through DNS Enumeration for Web app pentesting",
+    "tags":        ["dig","whois","web requsts","recon","information gathering","web enum","web recon"]
+  },
+  {
     "slug":        "curl-notes",
     "title":       "CURL - Sending WEB Requests with CURL",
     "date":        "2026-06-28",
     "type":        "tools",
     "platform":    "CURL",
     "description": "Here we learn how to send WEB requests with CURL, also basic information gathering using CURL",
-    "tags":        ["curl","web requsts","recon","information gathering","web enum","web recon"]
+    "tags":        ["curl","web requests","recon","information gathering","web enum","web recon"]
   },
   {
     "slug":        "git-part3",
