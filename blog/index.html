@@ -111,6 +111,10 @@
                     <div class="text-3xl font-extrabold text-primary-fixed-dim" id="stat-osint">—</div>
                     <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">OSINT</div>
                 </div>
+                <div class="bg-surface-container rounded-2xl px-7 py-5 border border-white/5 text-center">
+                    <div class="text-3xl font-extrabold text-primary-fixed-dim" id="stat-tools">—</div>
+                    <div class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">Tools</div>
+                </div>
             </div>
         </section>
 
@@ -200,6 +204,7 @@
             document.getElementById('stat-ctf').textContent   = all.filter(p=>p.type==='ctf').length;
             document.getElementById('stat-notes').textContent = all.filter(p=>p.type==='notes').length;
             document.getElementById('stat-osint').textContent = all.filter(p=>p.type==='osint').length;
+            document.getElementById('stat-tools').textContent = all.filter(p=>p.type==='tools').length;
             render(all);
         } catch {
             document.getElementById('posts-grid').innerHTML = '';

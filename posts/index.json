@@ -1,5 +1,32 @@
 [
   {
+    "slug":        "git-part3",
+    "title":       "Git/Github - Version Controlling Basics Part-3",
+    "date":        "2026-06-27",
+    "type":        "tools",
+    "platform":    "Git/Github",
+    "description": "Git/Github tool here in part-3 it covers reset, remote repository management, clone, pull, push, tag etc.",
+    "tags":        ["Git","Github","vcs","remote repo","push","pull","clone","tag"]
+  },
+  {
+    "slug":        "git-part2",
+    "title":       "Git/Github - Version Controlling Basics Part-2",
+    "date":        "2026-06-27",
+    "type":        "tools",
+    "platform":    "Git/Github",
+    "description": "Git/Github tool notes here in part-2 it covers commit, log, diff, show, checkout, restore etc.",
+    "tags":        ["Git","Github","vcs","commit","log","diff","show","checkout","restore"]
+  },
+  {
+    "slug":        "git-part1",
+    "title":       "Git/Github - Version Controlling Basics Part-1",
+    "date":        "2026-06-27",
+    "type":        "tools",
+    "platform":    "Git/Github",
+    "description": "Git/Github tool notes here in part-1 it covers basic git/github knowledge, install, workflow, add, status etc.",
+    "tags":        ["Git","Github","vcs","installing git","add","status"]
+  },
+  {
     "slug":        "linux-cut-tr",
     "title":       "Linux cut & tr for text processing - Notes",
     "date":        "2026-06-26",
