@@ -1,11 +1,20 @@
 [
   {
+    "slug":        "curl-notes",
+    "title":       "CURL - Sending WEB Requests with CURL",
+    "date":        "2026-06-28",
+    "type":        "tools",
+    "platform":    "CURL",
+    "description": "Here we learn how to send WEB requests with CURL, also basic information gathering using CURL",
+    "tags":        ["curl","web requsts","recon","information gathering","web enum","web recon"]
+  },
+  {
     "slug":        "git-part3",
     "title":       "Git/Github - Version Controlling Basics Part-3",
     "date":        "2026-06-27",
     "type":        "tools",
     "platform":    "Git/Github",
-    "description": "Git/Github tool here in part-3 it covers reset, remote repository management, clone, pull, push, tag etc.",
+    "description": "Git/Github tool notes here in part-3 it covers reset, remote repository management, clone, pull, push, tag etc.",
     "tags":        ["Git","Github","vcs","remote repo","push","pull","clone","tag"]
   },
   {
