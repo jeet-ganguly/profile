@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-dns",
+    "title":       "Computer Networking - Working of DNS - Notes",
+    "date":        "2026-07-01",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on DNS and its working.",
+    "tags":        ["CN","Networking","Computer Networking","DNS","DNS Server","DNS Records"]
+  },
+  {
     "slug":        "ig-part4",
     "title":       "WEB Information Gathering - WEB Crawling and Automation",
     "date":        "2026-06-28",
