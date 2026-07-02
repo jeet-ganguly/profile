@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-url",
+    "title":       "Computer Networking - URL Format & HTTP Headers - Notes",
+    "date":        "2026-07-02",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on URL Format & HTTP Headers.",
+    "tags":        ["CN","Networking","Computer Networking","HTTP","HTTP Headers","URL"]
+  },
+  {
     "slug":        "cn-http",
     "title":       "Computer Networking - HTTP & HTTP Methods - Notes",
     "date":        "2026-07-02",
