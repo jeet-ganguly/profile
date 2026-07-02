@@ -1,4 +1,12 @@
-[
+[{
+    "slug":        "cn-dns-records",
+    "title":       "Computer Networking - DNS Records - Notes",
+    "date":        "2026-07-02",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on DNS Records.",
+    "tags":        ["CN","Networking","Computer Networking","DNS","DNS Records"]
+  },
   {
     "slug":        "cn-dns",
     "title":       "Computer Networking - Working of DNS - Notes",
