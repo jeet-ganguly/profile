@@ -1,4 +1,14 @@
-[{
+[
+  {
+    "slug":        "cn-http",
+    "title":       "Computer Networking - HTTP & HTTP Methods - Notes",
+    "date":        "2026-07-02",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on HTTP & HTTP Methods.",
+    "tags":        ["CN","Networking","Computer Networking","HTTP","HTTP Methods","GET","POST","DELETE"]
+  },
+  {
     "slug":        "cn-dns-records",
     "title":       "Computer Networking - DNS Records - Notes",
     "date":        "2026-07-02",
