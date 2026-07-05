@@ -9,4 +9,4 @@ Currently full linux notes added and curently working on networking (with subnet
 
 and 1 osint investigation writeup covered
 
-osint,Penetration testing methods will come soon
+osint,Recon, information gathering, Penetration testing methods will come soon
