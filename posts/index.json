@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "cn-vpn",
+    "title":       "Computer Networking - Working of VPN - Notes",
+    "date":        "2026-07-08",
+    "type":        "notes",
+    "platform":    "Computer Networking",
+    "description": "Computer Networking notes on VPN working.",
+    "tags":        ["CN","Networking","Computer Networking","vpn","Security","VPN"]
+  },
+  {
     "slug":        "cn-smtp",
     "title":       "Computer Networking - SMTP,POP3 & IMAP - Notes",
     "date":        "2026-07-06",
