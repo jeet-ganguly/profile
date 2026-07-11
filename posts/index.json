@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "windows-fs",
+    "title":       "Windows - Filesystem - Notes",
+    "date":        "2026-07-12",
+    "type":        "notes",
+    "platform":    "Windows",
+    "description": "Windows filesystem archietecture",
+    "tags":        ["Windows","OS","filesystem","NTFS"]
+  },
+  {
     "slug":        "cn-vpn",
     "title":       "Computer Networking - Working of VPN - Notes",
     "date":        "2026-07-08",
