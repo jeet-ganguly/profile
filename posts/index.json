@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "def-incident-handling",
+    "title":       "Defensive Security - Incident Handling - Notes",
+    "date":        "2026-07-27",
+    "type":        "notes",
+    "platform":    "Defensive Security",
+    "description": "Introduction and basics of Defensive Security Incident Handling",
+    "tags":        ["blue team","soc","incident response","incident handling","defensive security"]
+  },
+  {
     "slug":        "windows-fs",
     "title":       "Windows - Filesystem - Notes",
     "date":        "2026-07-12",

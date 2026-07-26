@@ -1,4 +1,4 @@
-# Incident Response — Incident Handling
+# Defensive Security — Incident Handling
 
 > **Incident Handling** is the structured process of identifying, analyzing, containing, eradicating, recovering from, and documenting a cybersecurity incident.
 >
