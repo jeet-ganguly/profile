@@ -1,12 +1,21 @@
 [
   {
     "slug":        "powershell-basics",
+    "title":       "Powershell Datatypes and CMDLETS - Notes",
+    "date":        "2026-08-04",
+    "type":        "notes",
+    "platform":    "Powershell",
+    "description": "Datatype and Cmdlet of Powershell Scripting",
+    "tags":        ["powershell","scripting","datatype","cmdlet"]
+  },
+  {
+    "slug":        "powershell-basics",
     "title":       "Powershell Basics - Notes",
     "date":        "2026-08-04",
     "type":        "notes",
     "platform":    "Powershell",
     "description": "Introduction and basics of Powershell Scripting",
-    "tags":        ["blue team","soc","incident response","incident handling","powershell","scripting"]
+    "tags":        ["powershell","scripting"]
   },
   {
     "slug":        "def-incident-handling",
