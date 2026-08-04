@@ -1,6 +1,15 @@
 [
   {
     "slug":        "powershell-basics",
+    "title":       "Powershell Operators and if-else - Notes",
+    "date":        "2026-08-04",
+    "type":        "notes",
+    "platform":    "Powershell",
+    "description": "Operators and If-Else of Powershell Scripting",
+    "tags":        ["powershell","scripting","operator","if-else"]
+  },
+  {
+    "slug":        "powershell-basics",
     "title":       "Powershell Datatypes and CMDLETS - Notes",
     "date":        "2026-08-04",
     "type":        "notes",
