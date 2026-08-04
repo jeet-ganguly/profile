@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "powershell-basics",
+    "title":       "Powershell Basics - Notes",
+    "date":        "2026-08-04",
+    "type":        "notes",
+    "platform":    "Powershell",
+    "description": "Introduction and basics of Powershell Scripting",
+    "tags":        ["blue team","soc","incident response","incident handling","powershell","scripting"]
+  },
+  {
     "slug":        "def-incident-handling",
     "title":       "Defensive Security - Incident Handling - Notes",
     "date":        "2026-07-27",
