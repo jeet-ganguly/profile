@@ -1,6 +1,15 @@
 [
   {
-    "slug":        "powershell-basics",
+    "slug":        "powershell-loops-files",
+    "title":       "Powershell Loops and File-Handling - Notes",
+    "date":        "2026-08-04",
+    "type":        "notes",
+    "platform":    "Powershell",
+    "description": "Loops and File-Handling of Powershell Scripting",
+    "tags":        ["powershell","scripting","loops","file-handling","file"]
+  },
+  {
+    "slug":        "powershell-operators",
     "title":       "Powershell Operators and if-else - Notes",
     "date":        "2026-08-04",
     "type":        "notes",
@@ -9,7 +18,7 @@
     "tags":        ["powershell","scripting","operator","if-else"]
   },
   {
-    "slug":        "powershell-basics",
+    "slug":        "powershell-datatype-cmdlet",
     "title":       "Powershell Datatypes and CMDLETS - Notes",
     "date":        "2026-08-04",
     "type":        "notes",
