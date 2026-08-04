@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "powershell-try-catch-xml",
+    "title":       "Powershell Try-Catch and basic xml - Notes",
+    "date":        "2026-08-04",
+    "type":        "notes",
+    "platform":    "Powershell",
+    "description": "try-catch and xml of Powershell Scripting",
+    "tags":        ["powershell","scripting","try-catch","try","catch","finally","xml"]
+  },
+  {
     "slug":        "powershell-loops-files",
     "title":       "Powershell Loops and File-Handling - Notes",
     "date":        "2026-08-04",
