@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "windows-commands-1",
+    "title":       "Introduaction, Environment Variables, System Enumeration",
+    "date":        "2026-08-06",
+    "type":        "notes",
+    "platform":    "Windows",
+    "description": "try-catch and xml of Powershell Scripting",
+    "tags":        ["windows","env","env variables","system","system enumeration","cli","commands"]
+  },
+  {
     "slug":        "powershell-try-catch-xml",
     "title":       "Powershell Try-Catch and basic xml - Notes",
     "date":        "2026-08-04",
