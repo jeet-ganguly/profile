@@ -15,7 +15,7 @@
     "type":        "notes",
     "platform":    "Windows",
     "description": "Windows system enumeration",
-    "tags":        ["windows","scheduled","tasks","network","dns","shared resources","cli","commands"]
+    "tags":        ["windows","scheduled","tasks","ipconfig","network","dns","shared resources","cli","commands"]
   },
   {
     "slug":        "windows-commands-2",
