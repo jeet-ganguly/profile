@@ -1,11 +1,38 @@
 [
   {
-    "slug":        "windows-commands-1",
-    "title":       "Introduaction, Environment Variables, System Enumeration",
+    "slug":        "windows-commands-4",
+    "title":       "Windows File Management, Changing Ownership, Pattern Matching",
     "date":        "2026-08-06",
     "type":        "notes",
     "platform":    "Windows",
-    "description": "try-catch and xml of Powershell Scripting",
+    "description": "Windows system enumeration",
+    "tags":        ["windows","file","folders","ownership","pattern matching","icacls","findstr","cli","commands"]
+  },
+  {
+    "slug":        "windows-commands-3",
+    "title":       "Windows Scheduled Tasks, Network Information, Shared Resources",
+    "date":        "2026-08-06",
+    "type":        "notes",
+    "platform":    "Windows",
+    "description": "Windows system enumeration",
+    "tags":        ["windows","scheduled","tasks","network","dns","shared resources","cli","commands"]
+  },
+  {
+    "slug":        "windows-commands-2",
+    "title":       "Windows User & Group Enumeration, Process Management, Service Enumeration",
+    "date":        "2026-08-06",
+    "type":        "notes",
+    "platform":    "Windows",
+    "description": "Windows system enumeration",
+    "tags":        ["windows","user","group","enumeration","service enumeration","process management","cli","commands"]
+  },
+  {
+    "slug":        "windows-commands-1",
+    "title":       "Windows Introduaction, Environment Variables, System Enumeration",
+    "date":        "2026-08-06",
+    "type":        "notes",
+    "platform":    "Windows",
+    "description": "Introduction to cli in windows",
     "tags":        ["windows","env","env variables","system","system enumeration","cli","commands"]
   },
   {
