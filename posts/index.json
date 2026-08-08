@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "def-event-tracing",
+    "title":       "Defensive Security - Windows Event Tracing - Notes",
+    "date":        "2026-08-09",
+    "type":        "notes",
+    "platform":    "Defensive Security",
+    "description": "Importance of Event Tracing for Threat Hunting",
+    "tags":        ["blue team","soc","incident response","incident handling","defensive security","etw","event tracing"]
+  },
+  {
     "slug":        "windows-commands-4",
     "title":       "Windows File Management, Changing Ownership, Pattern Matching",
     "date":        "2026-08-06",
