@@ -6,7 +6,7 @@
     "type":        "notes",
     "platform":    "Defensive Security",
     "description": "Important Event IDs for Threat Hunting",
-    "tags":        ["blue team","soc","incident response","incident handling","defensive security","event ids","sysmon"]
+    "tags":        ["blue team","soc","incident response","Threat Hunting","defensive security","event ids","sysmon"]
   },
   {
     "slug":        "def-event-tracing",
@@ -15,7 +15,7 @@
     "type":        "notes",
     "platform":    "Defensive Security",
     "description": "Importance of Event Tracing for Threat Hunting",
-    "tags":        ["blue team","soc","incident response","incident handling","defensive security","etw","event tracing"]
+    "tags":        ["blue team","soc","incident response","Threat Hunting","defensive security","etw","event tracing"]
   },
   {
     "slug":        "windows-commands-4",
