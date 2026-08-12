@@ -1,641 +1,800 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Jeet Ganguly | Cyber Threat Intelligence Analyst</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-lowest": "#0b0e14",
-                        "on-secondary": "#003354",
-                        "surface-container-highest": "#32353c",
-                        "tertiary-fixed": "#ffdad5",
-                        "inverse-primary": "#005eb5",
-                        "on-tertiary-fixed-variant": "#930004",
-                        "surface": "#10131a",
-                        "primary-container": "#0a66c2",
-                        "secondary": "#98cbff",
-                        "surface-variant": "#32353c",
-                        "on-secondary-container": "#8bc4fc",
-                        "on-secondary-fixed-variant": "#004a77",
-                        "primary-fixed-dim": "#a8c8ff",
-                        "error": "#ffb4ab",
-                        "on-tertiary": "#690002",
-                        "on-surface": "#e1e2eb",
-                        "background": "#10131a",
-                        "inverse-surface": "#e1e2eb",
-                        "secondary-fixed-dim": "#98cbff",
-                        "surface-container-low": "#191c22",
-                        "on-surface-variant": "#c1c6d4",
-                        "on-primary": "#003062",
-                        "surface-bright": "#363940",
-                        "outline-variant": "#414752",
-                        "on-tertiary-fixed": "#410001",
-                        "on-background": "#e1e2eb",
-                        "error-container": "#93000a",
-                        "primary-fixed": "#d6e3ff",
-                        "on-primary-fixed-variant": "#00468a",
-                        "tertiary-container": "#c5281f",
-                        "surface-tint": "#a8c8ff",
-                        "inverse-on-surface": "#2e3037",
-                        "tertiary-fixed-dim": "#ffb4a9",
-                        "surface-dim": "#10131a",
-                        "surface-container-high": "#272a31",
-                        "on-error": "#690005",
-                        "secondary-fixed": "#cfe5ff",
-                        "tertiary": "#ffb4a9",
-                        "on-primary-fixed": "#001b3d",
-                        "on-secondary-fixed": "#001d33",
-                        "on-primary-container": "#dbe6ff",
-                        "outline": "#8b919e",
-                        "on-tertiary-container": "#ffdfda",
-                        "secondary-container": "#005182",
-                        "primary": "#a8c8ff",
-                        "on-error-container": "#ffdad6",
-                        "surface-container": "#1d2026"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Plus Jakarta Sans"],
-                        "body": ["Plus Jakarta Sans"],
-                        "label": ["Space Grotesk"]
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #10131a;
-            color: #e1e2eb;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jeet Ganguly — Cyber Security Researcher specializing in Web & API Security, Cyber Threat Intelligence, OSINT, SOCMINT and security research.">
+  <title>Jeet Ganguly — Cyber Security Researcher</title>
 
-        .glass-nav {
-            background: rgba(11, 14, 20, 0.7);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+  <style>
+    :root {
+      --bg: #10131a;
+      --panel: #191c22;
+      --panel2: #272a31;
+      --line: rgba(255,255,255,.07);
+      --text: #e1e2eb;
+      --muted: #c1c6d4;
+      --cyan: #a8c8ff;
+      --green: #98cbff;
+      --purple: #cfe5ff;
+    }
 
-        .text-glow {
-            text-shadow: 0 0 20px rgba(168, 200, 255, 0.3);
-        }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(85,230,255,.08), transparent 28rem),
+        radial-gradient(circle at 90% 18%, rgba(155,140,255,.08), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      overflow-x: hidden;
+    }
 
-        .bento-card {
-            transition: all 0.3s ease;
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .035;
+      background-image:
+        linear-gradient(rgba(168,200,255,.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168,200,255,.28) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+      z-index: -1;
+    }
 
-        .bento-card:hover {
-            transform: translateY(-4px);
-            background-color: #272a31;
-        }
-    </style>
+    .mono { font-family: "JetBrains Mono", monospace; }
+    .glass {
+      background: rgba(8, 12, 18, .72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--line);
+    }
+    .card {
+      background: linear-gradient(145deg, rgba(39,42,49,.92), rgba(25,28,34,.96));
+      border: 1px solid var(--line);
+      transition: .35s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(85,230,255,.28);
+      box-shadow: 0 20px 70px rgba(0,0,0,.28), 0 0 35px rgba(85,230,255,.06);
+    }
+    .cyan { color: #a8c8ff; }
+    .green { color: #98cbff; }
+    .purple { color: #cfe5ff; }
+    .gradient-text {
+      background: linear-gradient(100deg, #ffffff 15%, #a8c8ff 55%, #0a66c2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .glow {
+      text-shadow: 0 0 35px rgba(85,230,255,.25);
+    }
+    .terminal {
+      background: #070a0f;
+      border: 1px solid rgba(98,245,165,.16);
+      box-shadow: 0 0 70px rgba(98,245,165,.05);
+    }
+    .scanline {
+      position: relative;
+      overflow: hidden;
+    }
+    .scanline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(98,245,165,.18);
+      animation: scan 5s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes scan {
+      from { top: -2px; }
+      to { top: 100%; }
+    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .nav-link { color: #aeb9c8; transition: .2s; }
+    .nav-link:hover { color: white; }
+    .tag {
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.035);
+    }
+    .timeline-line {
+      background: linear-gradient(var(--cyan), rgba(85,230,255,0));
+    }
+    ::selection { background: rgba(85,230,255,.28); color: white; }
+  
+    /* Readability upgrade */
+    body {
+      color: #ffffff;
+      font-size: 17px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff;
+      font-weight: 800 !important;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    .nav-link {
+      color: #f1f1f1;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .tag {
+      color: #f4f4f4;
+      font-weight: 600;
+    }
+
+    .text-slate-300 { color: #f1f1f1 !important; }
+    .text-slate-400 { color: #e0e2e7 !important; }
+    .text-slate-500 { color: #bfc3cc !important; }
+    .text-slate-600 { color: #a8adb7 !important; }
+
+    .mono {
+      font-weight: 600;
+    }
+
+    .gradient-text {
+      font-weight: 900;
+    }
+
+    /* Slightly stronger section hierarchy */
+    section h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+    }
+
+    section h3 {
+      font-weight: 800 !important;
+    }
+
+    .hero-copy {
+      color: #f1f1f1;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      section h2 { font-size: 2.5rem; }
+    }
+
+  
+    .illustration-slot {
+      position: relative;
+      min-height: 260px;
+      border: 1px solid rgba(200,164,93,.28);
+      background:
+        linear-gradient(135deg, rgba(200,164,93,.07), rgba(111,44,44,.10)),
+        #211b15;
+      box-shadow: inset 0 0 45px rgba(0,0,0,.25);
+    }
+
+    .illustration-slot img {
+      display: block;
+      opacity: .92;
+      filter: sepia(.16) contrast(.95);
+      transition: opacity .3s ease, transform .5s ease;
+    }
+
+    .illustration-slot:hover img {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    .illustration-label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 9px 12px;
+      background: rgba(23,19,15,.88);
+      border-top: 1px solid rgba(200,164,93,.2);
+      color: #c8a45d;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .12em;
+    }
+
+    @media (max-width: 1023px) {
+      .illustration-slot {
+        min-height: 300px;
+      }
+    }
+
+  
+    .illustration-panel {
+      margin-top: 22px;
+      border: 1px solid rgba(200,164,93,.22);
+      background: linear-gradient(145deg, rgba(43,35,27,.96), rgba(29,24,19,.98));
+      box-shadow: 0 18px 50px rgba(0,0,0,.28);
+    }
+
+    .illustration-header,
+    .illustration-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      background: rgba(18,15,12,.72);
+      border-color: rgba(200,164,93,.15);
+    }
+
+    .illustration-header {
+      border-bottom: 1px solid rgba(200,164,93,.15);
+    }
+
+    .illustration-footer {
+      border-top: 1px solid rgba(200,164,93,.15);
+      color: #c8a45d;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .14em;
+    }
+
+    .illustration-image-wrap {
+      position: relative;
+      min-height: 340px;
+      background: #d8c7a2;
+      overflow: hidden;
+    }
+
+    .illustration-image {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+      filter: sepia(.18) contrast(.96);
+    }
+
+    .illustration-placeholder {
+      display: none;
+      position: absolute;
+      inset: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      color: #756852;
+      font-family: "Cinzel", serif;
+      letter-spacing: .12em;
+      text-align: center;
+    }
+
+    .illustration-placeholder small {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .06em;
+    }
+
+    @media (max-width: 640px) {
+      .illustration-image {
+        height: 300px;
+      }
+    }
+
+  </style>
 </head>
 
-<body class="selection:bg-primary selection:text-on-primary">
-    <!-- TopNavBar -->
-    <nav
-        class="fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-xl border-b border-white/5 shadow-[0px_24px_48px_rgba(0,0,0,0.4)]">
-        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-xl font-bold tracking-tighter text-white font-['Plus_Jakarta_Sans']">
-                Jeet Ganguly
-            </div>
-            <div class="hidden md:flex gap-8 items-center">
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#about">About</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#skills">Skills</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#projects">Projects</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#experience">Experience</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#achievements">Hall of Fame</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="blog/index.html">Blog</a>
-                <a class="text-white hover:text-blue-300 transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight"
-                    href="#contact">Contact</a>
-                <!--<button
-                    class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-bold scale-95 active:scale-90 transition-transform">
-                    Resume
-                </button>-->
-            </div>
-            <div class="md:hidden">
-                <span class="material-symbols-outlined text-white">menu</span>
-            </div>
-        </div>
+<body>
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="font-bold tracking-tight text-lg">
+        <span class="cyan">JG</span><span class="text-white">.</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-sm">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <button id="menuBtn" class="md:hidden text-slate-300" aria-label="Open menu">☰</button>
     </nav>
-    <main class="pt-24">
-        <!-- Hero Section -->
-        <section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
-            <div class="grid lg:grid-cols-2 gap-12 items-center z-10">
-                <div class="space-y-8">
-                    <div
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-highest rounded-full border border-white/5">
-                        <span class="relative flex h-3 w-3">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                        </span>
-                        <span class="font-label text-xs uppercase tracking-widest text-primary">Available for
-                            Opportunities</span>
-                    </div>
-                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none">
-                        Hey, I'm <span class="text-primary text-glow">Jeet</span>
-                    </h1>
-                    <p class="text-2xl md:text-3xl text-on-surface-variant font-medium max-w-xl leading-relaxed">
-                        Cyber Threat Intelligence &amp; OSINT. Web & API Penetration testing.
-                    </p>
-                    <div class="flex gap-4">
-                        <button
-                            class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 transition-all" onclick="window.location.href='/profile/blog/index.html'">
-                            View Notes
-                        </button>
-                        <!--<button
-                            class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-bold text-lg border border-white/5 hover:bg-surface-container-highest transition-all">
-                            Get in Touch
-                        </button>-->
-                    </div>
-                </div>
-                <div class="relative lg:h-[600px] hidden lg:block">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl -rotate-3 blur-3xl">
-                    </div>
-                    <img alt="Technical Visual"
-                        class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                        src="osint.png" />
-                </div>
-            </div>
-        </section>
-        <!-- About Section -->
-        <section class="py-32 px-8 bg-surface-container-low" id="about">
-            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-surface-container-highest p-8 rounded-2xl space-y-4">
-                            <span class="material-symbols-outlined text-primary text-4xl"
-                                data-icon="shield">shield</span>
-                            <h3 class="text-xl font-bold tracking-tight">Web and API Security</h3>
-                            <p class="text-on-surface-variant">Web application and API security auditing.</p>
-                        </div>
-                        <div class="bg-surface-container-highest p-8 rounded-2xl space-y-4 mt-8">
-                            <span class="material-symbols-outlined text-secondary text-4xl"
-                                data-icon="radar">radar</span>
-                            <h3 class="text-xl font-bold tracking-tight">OSINT</h3>
-                            <p class="text-on-surface-variant">Identification and mapping of digital footprints, Social
-                                media behavior.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 space-y-8">
-                    <h2 class="text-5xl font-extrabold tracking-tighter">Cyber Threat Intel &amp; Web-API Sec</h2>
-                    <p class="text-xl text-on-surface-variant leading-relaxed">
-                        Technical specialist in identifying cyber threats.
-                        Open-source intelligence gathering, Social Media Intelligence Gathering, Dark-Web & Telegram
-                        Investigation.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div
-                            class="flex items-center gap-2 px-6 py-3 bg-surface-container-high rounded-xl border border-white/5">
-                            <span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
-                            <span class="font-label text-sm uppercase font-bold tracking-widest">Web App Penetration
-                                Testing</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 px-6 py-3 bg-surface-container-high rounded-xl border border-white/5">
-                            <span class="material-symbols-outlined text-primary" data-icon="search">search</span>
-                            <span class="font-label text-sm uppercase font-bold tracking-widest">OSINT, SOCMINT
-                                research</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Core Skills -->
-        <section class="py-32 px-8 max-w-7xl mx-auto" id="skills">
-            <h2 class="text-4xl font-extrabold tracking-tighter mb-16">Core Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 bento-card">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-primary">
-                        <span class="material-symbols-outlined" data-icon="search">search</span> OSINT Skills
-                    </h3>
-                    <ul class="space-y-3 text-on-surface-variant font-medium">
-                        <li>• OSINT Investigations</li>
-                        <li>• SOCMINT (Social Media Intel)</li>
-                        <li>• Dark Web &amp; Telegram Monitoring</li>
-                        <li>• Cybercrime Ecosystem Research</li>
-                        <li>• Intelligence Report Writing</li>
-                    </ul>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 bento-card">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-secondary">
-                        <span class="material-symbols-outlined" data-icon="biotech">biotech</span> Digital Forensics
-                    </h3>
-                    <ul class="space-y-3 text-on-surface-variant font-medium">
-                        <li>• Malware Analysis (Linux)</li>
-                        <li>• Network Traffic (Wireshark, tcpdump)</li>
-                        <li>• Linux Log Analysis</li>
-                        <li>• DNS Tunneling, DGA &amp; C2 Detection</li>
-                        <li>• Autopsy</li>
-                    </ul>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 bento-card">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-tertiary">
-                        <span class="material-symbols-outlined" data-icon="gavel">gavel</span> Offensive Security
-                    </h3>
-                    <ul class="space-y-3 text-on-surface-variant font-medium">
-                        <li>• Web &amp; API Pen Testing</li>
-                        <li>• Linux & Windows Privilege Escalation</li>
-                        <li>• Binary Reverse Engineering</li>
-                        <li>• Linux Stack-based Binary Exploitation</li>
-                        <li>• Air-Gap device data exfiltration (Using near-Ultrasonic Wave)</li>
-                    </ul>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 bento-card">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-primary-fixed-dim">
-                        <span class="material-symbols-outlined" data-icon="code">code</span> Programming
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-xs font-bold tracking-wider">PYTHON</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-xs font-bold tracking-wider">C</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-xs font-bold tracking-wider">C++</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-xs font-bold tracking-wider">SQL</span>
-                    </div>
 
-                </div>
+    <div id="mobileMenu" class="hidden md:hidden px-5 pb-5 border-t border-white/5">
+      <div class="flex flex-col gap-4 pt-4 text-sm">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
 
-                <div class="md:col-span-2 bg-surface-container-low p-8 rounded-3xl border border-white/5 bento-card">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
-                        <span class="material-symbols-outlined text-secondary" data-icon="build">build</span> Tools
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Nmap</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Burpsuite</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">IDA/ Ghidra/
-                            Binary Ninja</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Metasploit</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Maltego</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Wireshark</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Docker</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Sqlmap</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Ffuf</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Caido</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Google
-                            Dorking</span>
-                        <span class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Hydra/ John
-                            the ripper/ Hashcat</span>
-                        <span
-                            class="bg-surface-container-highest px-4 py-2 rounded-xl text-sm font-bold">Better-Cap</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Projects Section -->
-        <section class="py-32 px-8 bg-surface-container-low" id="projects">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-                    <div class="max-w-2xl">
-                        <h2 class="text-5xl md:text-6xl font-extrabold tracking-tighter mb-6">Featured Deployments</h2>
-                        <p class="text-xl text-on-surface-variant">OSINT/SOCMINT tools and defensive architectures for
-                            threat
-                            mitigation.</p>
-                    </div>
-                    <!--<a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">
-                        View All Projects <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>-->
-                </div>
-                <div class="space-y-32">
-                    <!-- Project 1 -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="space-y-8">
-                            <div class="font-label text-primary font-bold tracking-widest uppercase text-sm">Tooling /
-                                SOCMINT</div>
-                            <h3 class="text-4xl font-extrabold tracking-tighter">Birdy-Edwards</h3>
-                            <p class="text-xl text-on-surface-variant leading-relaxed">
-                                Automated AI-Powered Facebook intelligence platform for target profiling, network
-                                analysis and threat reporting. Runs entirely on-device via Ollama.
-                            </p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-lg font-medium">
-                                    <span class="material-symbols-outlined text-primary"
-                                        data-icon="check_circle">check_circle</span> Automated Profile Intel Gathering
-                                </li>
-                                <li class="flex items-center gap-3 text-lg font-medium">
-                                    <span class="material-symbols-outlined text-primary"
-                                        data-icon="check_circle">check_circle</span> Hidden Relationship Mapping
-                                </li>
-                            </ul>
-                            <div class="flex gap-4">
-                                <a href="https://github.com/jeet-ganguly/birdy-edwards">
-                                    <button class="px-6 py-3 bg-primary text-on-primary rounded-xl font-bold">Github
-                                        Repo
-                                    </button>
-                                </a>
-                                <a href="edwards.html">
-                                    <button
-                                        class="px-6 py-3 bg-surface-container-highest text-on-surface rounded-xl font-bold">Tutorials
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <div
-                                class="absolute inset-0 bg-primary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
-                            </div>
-                            <img alt="Birdy-Edwards Project"
-                                class="w-full aspect-video object-cover rounded-3xl border border-white/5 relative z-10"
-                                src="logo.jpeg" />
-                        </div>
-                    </div>                    
-                    <!-- Project 2 -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="lg:order-2 space-y-8">
-                            <div class="font-label text-secondary font-bold tracking-widest uppercase text-sm">AI /
-                                Networking</div>
-                            <h3 class="text-4xl font-extrabold tracking-tighter">AI Based Secure DNS Firewall <h2>(Done
-                                    Under Indian Army Internship)</h2>
-                            </h3>
-                            <p class="text-xl text-on-surface-variant leading-relaxed">
-                                AI-Based system for real-time DNS request filtering. Blocks data exfiltration
-                                and C2 communication.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="px-4 py-1 bg-surface-container-highest rounded-full text-sm font-label">Python</span>
-                                <span
-                                    class="px-4 py-1 bg-surface-container-highest rounded-full text-sm font-label">TensorFlow,
-                                    Random Forest, NLP</span>
-                                <span class="px-4 py-1 bg-surface-container-highest rounded-full text-sm font-label">DNS
-                                    lib</span>
-                            </div>
-                        </div>
-                        <div class="lg:order-1 relative group">
-                            <div
-                                class="absolute inset-0 bg-secondary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
-                            </div>
-                            <img alt="DNS Firewall Project"
-                                class="w-full aspect-video object-cover rounded-3xl border border-white/5 relative z-10"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qmbRL09e6pLCp_KpMmaTzK58iSDeCeYI8ePsf5eLiMasEochhc9YAOnrYgJkmjZ8OlrGfsRGztZN29Y3rvA6xvb9f-JwBqzJQX4DRpOuxXkJKfsN0uci0BOsL4sCv5LXYItuoHsuMq5bWelVh5aLOMafW0_AZXck3jJKG5mOekprA3kTC9kY6rLH-_3FqUOppQavsMjHoWVC0NRVdA1sv1-_VgUpR4iz2BQ0c7HfkozS2CYQBPNBkWxbYTdtEqzt6OtSloYXUwc" />
-                        </div>
-                    </div>
-                     <!-- Project 3 -->
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="space-y-8">
-                            <div class="font-label text-primary font-bold tracking-widest uppercase text-sm">Research /
-                                C2-Covert Channel</div>
-                            <h3 class="text-4xl font-extrabold tracking-tighter">Canva-C2</h3>
-                            <p class="text-xl text-on-surface-variant leading-relaxed">
-                                Security research exploring how publicly accessible SaaS features like Canva could potentially be misused for Command-and-Control (C2) communication.
-                            </p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-lg font-medium">
-                                    <span class="material-symbols-outlined text-primary"
-                                        data-icon="check_circle">check_circle</span> Without API key
-                                </li>
-                                <li class="flex items-center gap-3 text-lg font-medium">
-                                    <span class="material-symbols-outlined text-primary"
-                                        data-icon="check_circle">check_circle</span> Developed in  both Python and C++
-                                </li>
-                            </ul>
-                            <div class="flex gap-4">
-                                <a href="https://github.com/jeet-ganguly/canva-c2">
-                                    <button class="px-6 py-3 bg-primary text-on-primary rounded-xl font-bold">Github
-                                        Repo
-                                    </button>
-                                </a>
-                                <a href="canva_c2.html">
-                                    <button
-                                        class="px-6 py-3 bg-surface-container-highest text-on-surface rounded-xl font-bold">Tutorials
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <div
-                                class="absolute inset-0 bg-primary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
-                            </div>
-                            <img alt="Birdy-Edwards Project"
-                                class="w-full aspect-video object-cover rounded-3xl border border-white/5 relative z-10"
-                                src="Wolf in Wool.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Experience Section -->
-        <section class="py-32 px-8 max-w-7xl mx-auto" id="experience">
-            <h2 class="text-5xl font-extrabold tracking-tighter mb-24 text-center">Professional History</h2>
-            <div class="space-y-12">
-                <!-- Indian Army (Moved to First) -->
-                <div
-                    class="flex flex-col md:flex-row gap-12 p-12 bg-surface-container rounded-3xl border border-white/5 items-start">
-                    <div class="min-w-[200px]">
-                        <div class="text-primary font-label font-bold text-lg mb-2">2025</div>
-                        <div class="text-on-surface-variant font-medium">Research Intern</div>
-                    </div>
-                    <div class="flex-1 space-y-6">
-                        <div class="flex flex-wrap items-center gap-4">
-                            <h3 class="text-3xl font-extrabold tracking-tight">Indian Army</h3>
-                            <span
-                                class="px-4 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-bold uppercase tracking-widest">Cyber
-                                Security Research</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-primary mt-1">timer</span>
-                                <p class="text-xl font-bold">Duration: 75 Days (2025)</p>
-                            </div>
-                            <p class="text-xl text-on-surface-variant leading-relaxed">
-                                Conducted AI-based DNS security research for detection of malicious C2 and phishing
-                                domains.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Private Security Startup-->
-                <div
-                    class="flex flex-col md:flex-row gap-12 p-12 bg-surface-container rounded-3xl border border-white/5 items-start">
-                    <div class="min-w-[200px]">
-                        <div class="text-secondary font-label font-bold text-lg mb-2">April 2025 — June 2026</div>
-                        <div class="text-on-surface-variant font-medium">Analyst Intern</div>
-                    </div>
-                    <div class="flex-1 space-y-6">
-                        <div class="flex flex-wrap items-center gap-4">
-                            <h3 class="text-3xl font-extrabold tracking-tight">Private Security Startup</h3>
-                            <span
-                                class="px-4 py-1 bg-secondary/10 text-secondary border border-secondary/20 rounded-full text-xs font-bold uppercase tracking-widest">CTI
-                                &amp; AppSec Analyst</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-secondary mt-1">calendar_today</span>
-                                <p class="text-xl font-bold">10 April 2025 — June 2026</p>
-                            </div>
-                            <ul class="space-y-3 text-on-surface-variant text-lg leading-relaxed list-disc ml-6">
-                                <li>Monitor dark web forums and Telegram channels for emerging cyber threats.</li>
-                                <li>Perform web application security testing and threat intelligence correlation for
-                                    real-world security incidents.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Hall of Fame & Achievements -->
-        <section class="py-32 px-8 bg-surface-container-low" id="achievements">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-5xl font-extrabold tracking-tighter mb-16">Hall of Fame &amp; Achievements</h2>
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <div class="bg-surface-container p-10 rounded-3xl border border-white/5 space-y-8">
-                        <h3 class="text-2xl font-bold text-primary flex items-center gap-3">
-                            <span class="material-symbols-outlined">stars</span> Hall of Fame
-                        </h3>
-                        <ol class="space-y-4 text-xl font-bold">
-                            <li class="flex items-center gap-4">
-                                <span
-                                    class="w-8 h-8 flex items-center justify-center bg-primary/20 text-primary rounded-full text-sm">1</span>
-                                <a
-                                    href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/standaard_functies/individuals/contact/data-leak-vulnerability-abuse-computer-systems/hall-of-fame-cvd">Netherlands
-                                    Government – Security Operations Centre (SOC)</a>
-                            </li>
-                            <li class="flex items-center gap-4">
+  <main>
+    <!-- Hero -->
+    <section class="min-h-screen pt-28 pb-20 px-5 sm:px-8 flex items-center">
+      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_1.12fr] gap-12 items-center">
 
-                                <span
-                                    class="w-8 h-8 flex items-center justify-center bg-primary/20 text-primary rounded-full text-sm">2</span>
-                                <a href="https://www.delta.exchange/bug-bounty-program">Delta Exchange</a>
-                            </li>
-                        </ol>
-                        <div class="pt-8 border-t border-white/5">
-                            <h3 class="text-2xl font-bold text-primary flex items-center gap-3 mb-6">
-                                <span class="material-symbols-outlined">school</span> Education
-                            </h3>
-                            <div class="space-y-2">
-                                <p class="text-xl font-bold">Bachelor of Science in Computer Science</p>
-                                <p class="text-on-surface-variant">Ramakrishna Mission Vidyamandira</p>
-                                <p class="text-primary font-bold">CGPA: 8.36</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-surface-container p-10 rounded-3xl border border-white/5">
-                        <h3 class="text-2xl font-bold text-secondary flex items-center gap-3 mb-8">
-                            <span class="material-symbols-outlined">emoji_events</span> Achievements
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="flex gap-4">
-                                <span class="text-secondary font-bold">1.</span>
-                                <div>
-                                    <p class="font-bold text-lg">Finalist – NCIIPC-AICTE Pentathon 2025</p>
-                                    <p class="text-sm text-on-surface-variant">National Level Cybersecurity Competition
-                                        in India
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="text-secondary font-bold">2.</span>
-                                <div>
-                                    <p class="font-bold text-lg">2nd Place – CTF at Urecon’24, UEM Kolkata</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="text-secondary font-bold">3.</span>
-                                <div>
-                                    <p class="font-bold text-lg">2nd Place – CTF at Innovacion 2024, IEM Kolkata</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="text-secondary font-bold">4.</span>
-                                <div>
-                                    <p class="font-bold text-lg">7th Place – Z3R0 D4Y CTF (International)</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="text-secondary font-bold">5.</span>
-                                <div>
-                                    <p class="font-bold text-lg">Ranked Top 3% Globally on TryHackMe (2025)</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact CTA -->
-        <section class="py-32 px-8" id="contact">
-            <div
-                class="max-w-7xl mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 p-16 md:p-24 rounded-[3rem] border border-white/5 text-center relative overflow-hidden">
-                <div
-                    class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(168,200,255,0.05),transparent)]">
-                </div>
-                <div class="relative z-10 space-y-12">
-                    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter">Security or OSINT Investigation
-                    </h2>
-                    <p class="text-2xl text-on-surface-variant max-w-2xl mx-auto">
-                        Threat assessment, Target Profiling and Investigation available upon request.
-                    </p>
-                    <div class="flex flex-col md:flex-row justify-center gap-6">
-                        <a class="bg-[#0a66c2] text-white px-10 py-5 rounded-2xl font-extrabold text-xl hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                            href="https://www.linkedin.com/in/jeet-ganguly-b2971531a/" target="_blank">
-                            LinkedIn
-                        </a>
-                        <a class="bg-[#24292e] text-white px-10 py-5 rounded-2xl font-extrabold text-xl hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                            href="https://github.com/jeet-ganguly" target="_blank">
-                            GitHub
-                        </a>
-                        <a class="bg-primary text-on-primary px-10 py-5 rounded-2xl font-extrabold text-xl hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                            href="mailto:jganguly148@gmail.com">
-                            Email
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-slate-950 dark:bg-slate-950 w-full py-12 px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto">
-            <div class="font-['Space_Grotesk'] text-sm uppercase tracking-widest text-slate-500">
-                © 2025 Jeet Ganguly. Technical Portfolio.
-            </div>
-            <div class="flex gap-8 mt-8 md:mt-0">
-                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
-                    href="https://www.linkedin.com/in/jeet-ganguly-b2971531a/" target="_blank">LinkedIn</a>
-                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
-                    href="https://github.com/jeet-ganguly" target="_blank">GitHub</a>
-                <a class="font-['Space_Grotesk'] text-sm uppercase font-bold tracking-widest text-white hover:text-blue-300 transition-colors"
-                    href="mailto:jganguly148@gmail.com">Email</a>
-            </div>
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-2 rounded-full tag mono text-xs text-slate-300 mb-7">
+            <span class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_12px_#62f5a5]"></span>
+            CYBER SECURITY • RESEARCH • INTELLIGENCE
+          </div>
+
+          <p class="mono text-sm cyan mb-4">jeet@security:~$ whoami</p>
+
+          <h1 class="text-5xl sm:text-7xl lg:text-[5.8rem] font-extrabold tracking-[-.055em] leading-[.92] glow">
+            Jeet<br>
+            <span class="gradient-text">Ganguly</span>
+          </h1>
+
+          <p class="hero-copy mt-7 max-w-2xl text-lg sm:text-xl leading-8 text-white">
+            Cyber Security practitioner focused on
+            <span class="text-slate-200">Web & API Security</span>,
+            <span class="text-slate-200">CTI / OSINT</span>,
+            SOCMINT and security research.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="/profile/blog/index.html" class="px-6 py-3 rounded-xl bg-blue-300 text-black font-extrabold hover:bg-white transition">
+              Explore my work →
+            </a>
+            <a href="https://github.com/jeet-ganguly" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl border border-white/15 bg-white/[.05] text-white font-bold hover:bg-white/[.10] transition">
+              GitHub ↗
+            </a>
+            <a href="mailto:jganguly148@gmail.com"
+               class="px-6 py-3 rounded-xl border border-white/15 bg-white/[.05] text-white font-bold hover:bg-white/[.10] transition">
+              Get in touch
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-2xl">
+            <div><div class="text-2xl font-extrabold">50+</div><div class="text-sm text-slate-300 mt-1 font-semibold">Vulnerabilities</div></div>
+            <div><div class="text-2xl font-extrabold">46</div><div class="text-sm text-slate-300 mt-1 font-semibold">Birdy-Edwards Stars</div></div>
+            <div><div class="text-2xl font-extrabold">105</div><div class="text-sm text-slate-300 mt-1 font-semibold">THM Machines</div></div>
+            <div><div class="text-2xl font-extrabold">Top 3%</div><div class="text-sm text-slate-300 mt-1 font-semibold">TryHackMe</div></div>
+          </div>
         </div>
-    </footer>
-</body>
 
+        <!-- Original portfolio visual -->
+        <div class="reveal rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950/60 lg:scale-[1.03]">
+          <img src="avatar.png" alt="OSINT and cyber security visual"
+               class="w-full h-[380px] sm:h-[440px] lg:h-[540px] object-cover object-center opacity-95 hover:opacity-100 transition duration-700">
+          <div class="px-5 py-3 border-t border-white/10 flex items-center justify-between">
+            <span class="mono text-sm text-slate-300">osint.png</span>
+            <span class="mono text-sm text-blue-200">THREAT INTELLIGENCE / OSINT</span>
+          </div>
+        </div>
+
+        <!-- Terminal -->
+        <div class="reveal terminal scanline rounded-2xl overflow-hidden">
+          <div class="flex items-center gap-2 px-5 py-3 border-b border-white/5 bg-white/[.02]">
+            <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+            <span class="ml-3 mono text-xs text-slate-500">jeet@lab — zsh</span>
+          </div>
+          <div class="p-6 sm:p-8 mono text-sm sm:text-base leading-8 text-white">
+            <div><span class="green">jeet@lab</span>:<span class="cyan">~</span>$ cat profile.txt</div>
+            <div class="text-slate-500 mt-3">────────────────────────────────</div>
+            <div class="mt-3"><span class="text-slate-500">focus:</span> <span class="text-white">security research</span></div>
+            <div><span class="text-slate-500">specialty:</span> <span class="text-white">web / api / CTI / OSINT</span></div>
+            <div><span class="text-slate-500">research:</span> <span class="text-white">C2 & DNS security</span></div>
+            <div><span class="text-slate-500">tooling:</span> <span class="text-white">Python / C++ / Docker</span></div>
+            <div><span class="text-slate-500">mindset:</span> <span class="green">defend by understanding</span></div>
+            <div class="text-slate-500 mt-3">────────────────────────────────</div>
+            <div class="mt-4"><span class="green">✓</span> responsible disclosure</div>
+            <div><span class="green">✓</span> threat intelligence</div>
+            <div><span class="green">✓</span> security automation</div>
+            <div><span class="green">✓</span> continuous learning</div>
+            <div class="mt-5"><span class="green">jeet@lab</span>:<span class="cyan">~</span>$ <span>_</span></div>
+          </div>
+        </div>
+
+        <!-- Separate illustration section -->
+        <div class="reveal illustration-panel rounded-3xl overflow-hidden">
+          <div class="illustration-header">
+            <span class="case-label">CASE ILLUSTRATION</span>
+            <span class="mono text-[9px] text-[#a99b7e]">ARCHIVE / VISUAL EVIDENCE</span>
+          </div>
+          <div class="illustration-image-wrap">
+            <img
+              src="sherlock.png"
+              alt="Cyber security detective illustration"
+              class="illustration-image"
+            >
+            <div class="illustration-placeholder">
+              <span>ADD YOUR ILLUSTRATION</span>
+              <!--<small>Replace illustration.jpg with your image</small>-->
+            </div>
+          </div>
+          <div class="illustration-footer">
+            <span>EXHIBIT A</span>
+            <span>INVESTIGATION VISUAL</span>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-28 px-5 sm:px-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-[.75fr_1.25fr] gap-16">
+        <div class="reveal">
+          <p class="mono text-xs uppercase tracking-[.25em] cyan">01 / About</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">Security through<br><span class="text-slate-500">curiosity.</span></h2>
+        </div>
+        <div class="reveal">
+          <p class="text-xl leading-9 text-slate-300">
+            I work across offensive and defensive security — finding weaknesses in applications,
+            investigating threat ecosystems, building security tooling and researching how modern
+            infrastructure can be abused.
+          </p>
+          <p class="mt-6 text-slate-500 leading-8">
+            My strongest areas are application security, threat intelligence, OSINT/SOCMINT,
+            dark-web monitoring, network analysis and security automation. I enjoy turning
+            messy security problems into practical tools, repeatable research and useful intelligence.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <span class="tag px-3 py-2 rounded-lg text-sm">Web & API Security</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Threat Intelligence</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">OSINT / SOCMINT</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Security Research</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="py-28 px-5 sm:px-8 bg-white/[.018] border-y border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal mb-14">
+          <p class="mono text-xs uppercase tracking-[.25em] cyan">02 / Experience</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold">Where I've worked</h2>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-[7px] top-2 bottom-2 w-px timeline-line hidden sm:block"></div>
+
+          <article class="reveal relative sm:pl-12 pb-14">
+            <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(85,230,255,.5)]"></div>
+            <div class="grid lg:grid-cols-[220px_1fr] gap-5">
+              <div class="mono text-xs text-cyan-300 pt-1">JUN — AUG 2025</div>
+              <div class="card rounded-2xl p-7">
+                <div class="flex flex-wrap justify-between gap-4">
+                  <div>
+                    <h3 class="text-2xl font-bold">Indian Army</h3>
+                    <p class="text-slate-500 mt-1">Cyber Security Research Intern · Delhi</p>
+                  </div>
+                  <span class="tag h-fit px-3 py-1 rounded-full text-xs text-cyan-300">SELECTED 2 / 6,000+</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-slate-400 leading-7">
+                  <li>• Designed an AI-based Secure DNS Firewall for real-time DNS exfiltration and C2 detection.</li>
+                  <li>• Built a Random Forest + DistilRoBERTa pipeline achieving a reported 98% blocking rate against 3,000+ generated malicious DNS requests.</li>
+                  <li>• Developed a testing C2 malware for controlled firewall benchmarking and studied DNSSEC standards RFC-4033/4034/4035.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal relative sm:pl-12 pb-14">
+            <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-purple-400 shadow-[0_0_20px_rgba(155,140,255,.5)]"></div>
+            <div class="grid lg:grid-cols-[220px_1fr] gap-5">
+              <div class="mono text-xs text-purple-300 pt-1">APR 2025 — APR 2026</div>
+              <div class="card rounded-2xl p-7">
+                <div class="flex flex-wrap justify-between gap-4">
+                  <div>
+                    <h3 class="text-2xl font-bold">FaceOff Technologies</h3>
+                    <p class="text-slate-500 mt-1">Cyber Security Intern — Application Security · Remote</p>
+                  </div>
+                  <span class="tag h-fit px-3 py-1 rounded-full text-xs text-purple-300">APPSEC + CTI</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-slate-400 leading-7">
+                  <li>• Tested production web applications and APIs; identified 50+ vulnerabilities across access control, authentication, race conditions, JWT, XSS, SSRF and business logic.</li>
+                  <li>• Monitored 100+ dark-web forums and Telegram channels for threat gathering and threat-actor profiling.</li>
+                  <li>• Conducted cybercrime ecosystem research and dark-web investigations for threat intelligence operations.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal relative sm:pl-12">
+            <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-green-400 shadow-[0_0_20px_rgba(98,245,165,.5)]"></div>
+            <div class="grid lg:grid-cols-[220px_1fr] gap-5">
+              <div class="mono text-xs text-green-300 pt-1">OCT — DEC 2025</div>
+              <div class="card rounded-2xl p-7">
+                <h3 class="text-2xl font-bold">Independent Vulnerability Research</h3>
+                <p class="text-slate-500 mt-1">Bug Bounty & Responsible Disclosure</p>
+                <ul class="mt-6 space-y-3 text-slate-400 leading-7">
+                  <li>• Identified 15 API vulnerabilities across public bug bounty programs over two months.</li>
+                  <li>• Recognized by the Netherlands Government SOC and Delta Exchange for responsible disclosure.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-28 px-5 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <p class="mono text-xs uppercase tracking-[.25em] cyan">03 / Selected Research</p>
+            <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold">Things I've built</h2>
+          </div>
+          <a href="https://github.com/jeet-ganguly" target="_blank" rel="noopener" class="text-sm text-slate-400 hover:text-white transition">View all repositories ↗</a>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+
+          <article class="reveal card rounded-3xl p-7 sm:p-9 lg:col-span-2">
+            <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-10 items-center">
+              <div>
+                <div class="flex items-center gap-3 mb-5">
+                  <span class="mono text-xs cyan">01</span>
+                  <span class="text-xs uppercase tracking-widest text-slate-500">SOCMINT / AI</span>
+                  <span class="tag px-2 py-1 rounded-full text-xs">★ 46</span>
+                </div>
+                <h3 class="text-3xl sm:text-4xl font-extrabold">Birdy-Edwards</h3>
+                <p class="mt-4 text-slate-400 leading-8 max-w-2xl">
+                  AI-powered Facebook SOCMINT platform for threat-actor profiling, behavioral analysis,
+                  relationship mapping and intelligence reporting.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span class="tag px-3 py-1.5 rounded-lg text-xs">Python</span>
+                  <span class="tag px-3 py-1.5 rounded-lg text-xs">Ollama</span>
+                  <span class="tag px-3 py-1.5 rounded-lg text-xs">Gemma</span>
+                  <span class="tag px-3 py-1.5 rounded-lg text-xs">Docker</span>
+                  <span class="tag px-3 py-1.5 rounded-lg text-xs">Network Graphs</span>
+                </div>
+                <div class="mt-8 flex gap-3">
+                  <a href="https://github.com/jeet-ganguly/birdy-edwards" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg bg-white text-black font-bold text-sm">GitHub ↗</a>
+                  <a href="edwards.html" class="px-5 py-2.5 rounded-lg border border-white/10 text-sm font-semibold">Explore</a>
+                </div>
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/30">
+                <img src="logo.jpeg" alt="Birdy-Edwards project" class="w-full h-64 object-cover opacity-90 hover:opacity-100 transition duration-500">
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal card rounded-3xl p-7 sm:p-9">
+            <div class="mono text-xs cyan">02 / DEFENSIVE AI</div>
+            <h3 class="mt-4 text-2xl font-bold">AI-Based Secure DNS Firewall</h3>
+            <p class="mt-4 text-slate-400 leading-7">
+              Real-time filtering architecture for DNS-based data exfiltration and C2 beaconing,
+              developed during the Indian Army internship.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">Random Forest</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">DistilRoBERTa</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">DNS</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">Python</span>
+            </div>
+            <div class="mt-6 rounded-xl overflow-hidden border border-white/10">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qmbRL09e6pLCp_KpMmaTzK58iSDeCeYI8ePsf5eLiMasEochhc9YAOnrYgJkmjZ8OlrGfsRGztZN29Y3rvA6xvb9f-JwBqzJQX4DRpOuxXkJKfsN0uci0BOsL4sCv5LXYItuoHsuMq5bWelVh5aLOMafW0_AZXck3jJKG5mOekprA3kTC9kY6rLH-_3FqUOppQavsMjHoWVC0NRVdA1sv1-_VgUpR4iz2BQ0c7HfkozS2CYQBPNBkWxbYTdtEqzt6OtSloYXUwc"
+                   alt="DNS Firewall visual" class="w-full h-40 object-cover opacity-80 hover:opacity-100 transition">
+            </div>
+            <div class="mt-5 p-4 rounded-xl bg-black/30 border border-white/5 mono text-xs">
+              <span class="green">98%</span> reported malicious-request blocking rate
+            </div>
+          </article>
+
+          <article class="reveal card rounded-3xl p-7 sm:p-9">
+            <div class="flex items-center gap-3">
+              <span class="mono text-xs purple">03 / SECURITY RESEARCH</span>
+              <span class="tag px-2 py-1 rounded-full text-xs">★ 8</span>
+            </div>
+            <h3 class="mt-4 text-2xl font-bold">Canva-C2</h3>
+            <p class="mt-4 text-slate-400 leading-7">
+              Research exploring potential abuse of legitimate SaaS infrastructure for command-and-control
+              communication and the defensive indicators such behavior can create.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">C++</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">Python</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">MITRE ATT&CK</span>
+              <span class="tag px-3 py-1.5 rounded-lg text-xs">Detection</span>
+            </div>
+            <div class="mt-7 rounded-xl overflow-hidden border border-white/10">
+              <img src="Wolf in Wool.png" alt="Canva-C2 research visual" class="w-full h-40 object-cover opacity-85 hover:opacity-100 transition">
+            </div>
+            <div class="mt-7 flex gap-3">
+              <a href="https://github.com/jeet-ganguly/canva-c2" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg bg-white text-black font-bold text-sm">GitHub ↗</a>
+              <a href="canva_c2.html" class="px-5 py-2.5 rounded-lg border border-white/10 text-sm font-semibold">Research</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-28 px-5 sm:px-8 bg-white/[.018] border-y border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal mb-14">
+          <p class="mono text-xs uppercase tracking-[.25em] cyan">04 / Arsenal</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold">Technical stack</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-cyan-300 mono text-xs">01</div>
+            <h3 class="mt-4 text-xl font-bold">Web & API Security</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">OWASP Top 10, API security, IDOR, broken access control, auth bypass, race conditions, JWT attacks, XSS, CSRF, SSRF, price tampering and business logic flaws.</p>
+          </div>
+
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-purple-300 mono text-xs">02</div>
+            <h3 class="mt-4 text-xl font-bold">CTI & OSINT</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">Dark-web monitoring, Telegram OSINT, SOCMINT, threat-actor profiling, cybercrime ecosystem research and intelligence investigations.</p>
+          </div>
+
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-green-300 mono text-xs">03</div>
+            <h3 class="mt-4 text-xl font-bold">Malware & Binary</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">Linux binary exploitation, ret2libc, ret2syscall, ROP chains, reverse engineering, malware analysis, DNS tunneling, DGA and C2 detection.</p>
+          </div>
+
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-cyan-300 mono text-xs">04</div>
+            <h3 class="mt-4 text-xl font-bold">Network & System</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">Wireshark, tcpdump, traffic analysis, Linux/Windows privilege escalation, Linux log analysis and covert-channel research.</p>
+          </div>
+
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-purple-300 mono text-xs">05</div>
+            <h3 class="mt-4 text-xl font-bold">SIEM & Threat Hunting</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">ELK Stack, Kibana Query Language and threat hunting workflows built around security telemetry.</p>
+          </div>
+
+          <div class="reveal card rounded-2xl p-7">
+            <div class="text-green-300 mono text-xs">06</div>
+            <h3 class="mt-4 text-xl font-bold">Development</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">Python, C++, PowerShell, SQL, Docker and local LLM inference with Ollama.</p>
+          </div>
+        </div>
+
+        <div class="reveal mt-6 card rounded-2xl p-7">
+          <div class="mono text-xs text-slate-500 mb-5">TOOLS_I_USE.txt</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag px-3 py-2 rounded-lg text-sm">Burp Suite</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Caido</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Nmap</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Wireshark</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">tcpdump</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Ghidra</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">IDA</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Binary Ninja</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Metasploit</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Docker</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Ollama</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">SQL</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">PowerShell</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="py-28 px-5 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal mb-14">
+          <p class="mono text-xs uppercase tracking-[.25em] cyan">05 / Recognition</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold">Proof of work</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="reveal card rounded-2xl p-8">
+            <h3 class="text-2xl font-bold">Responsible Disclosure</h3>
+            <div class="mt-7 space-y-5">
+              <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/standaard_functies/individuals/contact/data-leak-vulnerability-abuse-computer-systems/hall-of-fame-cvd" target="_blank" rel="noopener" class="block p-5 rounded-xl bg-white/[.03] border border-white/5 hover:border-cyan-400/20 transition">
+                <div class="mono text-xs cyan">HALL OF FAME</div>
+                <div class="mt-2 font-bold">Netherlands Government SOC</div>
+                <div class="mt-1 text-sm text-slate-500">Recognized for responsible vulnerability disclosure.</div>
+              </a>
+              <a href="https://www.delta.exchange/bug-bounty-program" target="_blank" rel="noopener" class="block p-5 rounded-xl bg-white/[.03] border border-white/5 hover:border-cyan-400/20 transition">
+                <div class="mono text-xs cyan">HALL OF FAME</div>
+                <div class="mt-2 font-bold">Delta Exchange</div>
+                <div class="mt-1 text-sm text-slate-500">Recognized for responsible vulnerability disclosure.</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal card rounded-2xl p-8">
+            <h3 class="text-2xl font-bold">Competition Record</h3>
+            <div class="mt-7 space-y-4 text-sm">
+              <div class="flex gap-4"><span class="mono cyan">2025</span><span>Finalist — NCIIPC-AICTE Pentathon</span></div>
+              <div class="flex gap-4"><span class="mono purple">2024</span><span>7th Place — Z3R0 D4Y CTF (International)</span></div>
+              <div class="flex gap-4"><span class="mono green">2024</span><span>2nd Place — Urecon’24 CTF, UEM Kolkata</span></div>
+              <div class="flex gap-4"><span class="mono cyan">2024</span><span>2nd Place — Innovacion CTF, IEM Kolkata</span></div>
+              <div class="flex gap-4"><span class="mono purple">2026</span><span>Top 3% Globally — TryHackMe · 105 machines</span></div>
+            </div>
+
+            <div class="mt-9 pt-7 border-t border-white/5">
+              <div class="mono text-xs text-slate-500">EDUCATION</div>
+              <div class="mt-3 font-bold">B.Sc. Computer Science</div>
+              <div class="text-sm text-slate-500">Ramakrishna Mission Vidyamandira · University of Calcutta</div>
+              <div class="mt-2 text-cyan-300 font-semibold">CGPA 8.36</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-28 px-5 sm:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="reveal rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-cyan-300/[.08] via-white/[.02] to-purple-400/[.06] p-9 sm:p-16 text-center relative overflow-hidden">
+          <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-cyan-300/10 blur-3xl"></div>
+          <div class="relative">
+            <p class="mono text-xs uppercase tracking-[.25em] cyan">06 / Contact</p>
+            <h2 class="mt-5 text-4xl sm:text-6xl font-extrabold tracking-tight">Let's build something<br><span class="gradient-text">secure.</span></h2>
+            <p class="mt-6 max-w-2xl mx-auto text-slate-400 leading-8">
+              Security research, application security, threat intelligence or an interesting technical problem —
+              I'm always open to meaningful conversations.
+            </p>
+
+            <div class="mt-9 flex flex-wrap justify-center gap-3">
+              <a href="mailto:jganguly148@gmail.com" class="px-6 py-3 rounded-xl bg-white text-black font-bold hover:bg-cyan-200 transition">Email me</a>
+              <a href="https://www.linkedin.com/in/jeet-ganguly-b2971531a/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl border border-white/10 bg-white/[.04] font-semibold hover:bg-white/[.08] transition">LinkedIn ↗</a>
+              <a href="https://github.com/jeet-ganguly" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl border border-white/10 bg-white/[.04] font-semibold hover:bg-white/[.08] transition">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 py-8 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between gap-4 text-xs text-slate-600">
+      <div>© 2026 Jeet Ganguly. Built for security research & engineering.</div>
+      <div class="mono">defend_by_understanding();</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('#mobileMenu a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Reveal-on-scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
