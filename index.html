@@ -297,10 +297,40 @@
       }
     }
 
+  
+    /* Subtle snowfall / winter evidence atmosphere */
+    #snowfall {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      opacity: .72;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    .counter {
+      display: inline-block;
+      min-width: 2ch;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #snowfall {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+  <canvas id="snowfall" aria-hidden="true"></canvas>
   <!-- Navigation -->
   <header class="fixed top-0 left-0 right-0 z-50 glass">
     <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
@@ -359,7 +389,7 @@
 
           <div class="mt-9 flex flex-wrap gap-3">
             <a href="/profile/blog/index.html" class="px-6 py-3 rounded-xl bg-blue-300 text-black font-extrabold hover:bg-white transition">
-              Explore my work →
+              Explore my notes →
             </a>
             <a href="https://github.com/jeet-ganguly" target="_blank" rel="noopener"
                class="px-6 py-3 rounded-xl border border-white/15 bg-white/[.05] text-white font-bold hover:bg-white/[.10] transition">
@@ -372,10 +402,10 @@
           </div>
 
           <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-2xl">
-            <div><div class="text-2xl font-extrabold">50+</div><div class="text-sm text-slate-300 mt-1 font-semibold">Vulnerabilities</div></div>
-            <div><div class="text-2xl font-extrabold">46</div><div class="text-sm text-slate-300 mt-1 font-semibold">Birdy-Edwards Stars</div></div>
-            <div><div class="text-2xl font-extrabold">105</div><div class="text-sm text-slate-300 mt-1 font-semibold">THM Machines</div></div>
-            <div><div class="text-2xl font-extrabold">Top 3%</div><div class="text-sm text-slate-300 mt-1 font-semibold">TryHackMe</div></div>
+            <div><div class="text-3xl font-extrabold" style="color: rgb(255, 194, 194);"><span class="counter" data-target="50">0</span>+</div><div class="text-sm text-slate-300 mt-1 font-semibold">Vulnerabilities Found</div></div>
+            <div><div class="text-3xl font-extrabold" style="color: rgb(248, 218, 170);"><span class="counter" data-target="40">0</span>+</div><div class="text-sm text-slate-300 mt-1 font-semibold">Birdy-Edwards Stars</div></div>
+            <div><div class="text-3xl font-extrabold" style="color: rgb(234, 254, 117);"><span class="counter" data-target="100">0</span>+</div><div class="text-sm text-slate-300 mt-1 font-semibold">Dark-web & Telegram Channels Monitored</div></div>
+            <div><div class="text-3xl font-extrabold" style="color: rgb(226, 255, 194);"><span class="counter" data-target="100">0</span>+</div><div class="text-sm text-slate-300 mt-1 font-semibold">THM solved</div></div>
           </div>
         </div>
 
@@ -384,7 +414,7 @@
           <img src="avatar.png" alt="OSINT and cyber security visual"
                class="w-full h-[380px] sm:h-[440px] lg:h-[540px] object-cover object-center opacity-95 hover:opacity-100 transition duration-700">
           <div class="px-5 py-3 border-t border-white/10 flex items-center justify-between">
-            <span class="mono text-sm text-slate-300">osint.png</span>
+            <span class="mono text-sm text-slate-300"></span>
             <span class="mono text-sm text-blue-200">THREAT INTELLIGENCE / OSINT</span>
           </div>
         </div>
@@ -417,8 +447,8 @@
         <!-- Separate illustration section -->
         <div class="reveal illustration-panel rounded-3xl overflow-hidden">
           <div class="illustration-header">
-            <span class="case-label">CASE ILLUSTRATION</span>
-            <span class="mono text-[9px] text-[#a99b7e]">ARCHIVE / VISUAL EVIDENCE</span>
+            <span class="case-label"></span>
+            <span class="mono text-[9px] text-[#a99b7e]">Fan of Sherlock Holmes</span>
           </div>
           <div class="illustration-image-wrap">
             <img
@@ -427,13 +457,13 @@
               class="illustration-image"
             >
             <div class="illustration-placeholder">
-              <span>ADD YOUR ILLUSTRATION</span>
+              <span></span>
               <!--<small>Replace illustration.jpg with your image</small>-->
             </div>
           </div>
           <div class="illustration-footer">
-            <span>EXHIBIT A</span>
-            <span>INVESTIGATION VISUAL</span>
+            <span></span>
+            <span></span>
           </div>
         </div>
           </div>
@@ -483,7 +513,7 @@
           <article class="reveal relative sm:pl-12 pb-14">
             <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(85,230,255,.5)]"></div>
             <div class="grid lg:grid-cols-[220px_1fr] gap-5">
-              <div class="mono text-xs text-cyan-300 pt-1">JUN — AUG 2025</div>
+              <div class=" text-xs text-blue-300 pt-1"><b>JUN — AUG 2025</b></div>
               <div class="card rounded-2xl p-7">
                 <div class="flex flex-wrap justify-between gap-4">
                   <div>
@@ -504,7 +534,7 @@
           <article class="reveal relative sm:pl-12 pb-14">
             <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-purple-400 shadow-[0_0_20px_rgba(155,140,255,.5)]"></div>
             <div class="grid lg:grid-cols-[220px_1fr] gap-5">
-              <div class="mono text-xs text-purple-300 pt-1">APR 2025 — APR 2026</div>
+              <div class=" text-xs text-purple-300 pt-1"><b>APR 2025 — APR 2026</b></div>
               <div class="card rounded-2xl p-7">
                 <div class="flex flex-wrap justify-between gap-4">
                   <div>
@@ -525,7 +555,7 @@
           <article class="reveal relative sm:pl-12">
             <div class="hidden sm:block absolute left-0 top-2 w-4 h-4 rounded-full bg-green-400 shadow-[0_0_20px_rgba(98,245,165,.5)]"></div>
             <div class="grid lg:grid-cols-[220px_1fr] gap-5">
-              <div class="mono text-xs text-green-300 pt-1">OCT — DEC 2025</div>
+              <div class="text-xs text-green-300 pt-1"><b>OCT — DEC 2025</b></div>
               <div class="card rounded-2xl p-7">
                 <h3 class="text-2xl font-bold">Independent Vulnerability Research</h3>
                 <p class="text-slate-500 mt-1">Bug Bounty & Responsible Disclosure</p>
@@ -657,8 +687,8 @@
 
           <div class="reveal card rounded-2xl p-7">
             <div class="text-green-300 mono text-xs">03</div>
-            <h3 class="mt-4 text-xl font-bold">Malware & Binary</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-500">Linux binary exploitation, ret2libc, ret2syscall, ROP chains, reverse engineering, malware analysis, DNS tunneling, DGA and C2 detection.</p>
+            <h3 class="mt-4 text-xl font-bold">Binary Exploitation</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-500">Linux binary exploitation, ret2libc, ret2syscall, ROP chains, reverse engineering.</p>
           </div>
 
           <div class="reveal card rounded-2xl p-7">
@@ -670,7 +700,7 @@
           <div class="reveal card rounded-2xl p-7">
             <div class="text-purple-300 mono text-xs">05</div>
             <h3 class="mt-4 text-xl font-bold">SIEM & Threat Hunting</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-500">ELK Stack, Kibana Query Language and threat hunting workflows built around security telemetry.</p>
+            <p class="mt-4 text-sm leading-7 text-slate-500">ELK Stack, Kibana Query Language, threat hunting workflows built around security telemetry, DNS tunneling, DGA and C2 detection.</p>
           </div>
 
           <div class="reveal card rounded-2xl p-7">
@@ -694,8 +724,17 @@
             <span class="tag px-3 py-2 rounded-lg text-sm">Metasploit</span>
             <span class="tag px-3 py-2 rounded-lg text-sm">Docker</span>
             <span class="tag px-3 py-2 rounded-lg text-sm">Ollama</span>
-            <span class="tag px-3 py-2 rounded-lg text-sm">SQL</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">SQLmap</span>
             <span class="tag px-3 py-2 rounded-lg text-sm">PowerShell</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">ELK stack</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Process Hacker</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Linpeas</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Winpeas</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Hydra, John, HashCat</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Holehe</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Maltego</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">Google-dorks</span>
+            <span class="tag px-3 py-2 rounded-lg text-sm">GDB</span>
           </div>
         </div>
       </div>
@@ -795,6 +834,127 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  
+    // Animated hero counters
+    const counters = document.querySelectorAll('.counter');
+
+    const animateCounter = (el) => {
+      const target = Number(el.dataset.target || 0);
+      const duration = 1400;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        // Smooth ease-out curve.
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(target * eased).toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = target.toLocaleString();
+        }
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    // Repeat the counter animation every 10 seconds.
+    const runCounters = () => {
+      counters.forEach(counter => {
+        counter.textContent = '0';
+        animateCounter(counter);
+      });
+    };
+
+    // Start when the counters are visible, then repeat every 10 seconds.
+    const counterSection = document.querySelector('.counter')?.closest('section');
+    let countersStarted = false;
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          countersStarted = true;
+          runCounters();
+          setInterval(runCounters, 10000);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    if (counterSection) {
+      counterObserver.observe(counterSection);
+    }
+
+    // Lightweight snowfall effect.
+    // It stays behind the content, does not capture clicks, and respects
+    // prefers-reduced-motion.
+    const snowCanvas = document.getElementById('snowfall');
+    const snowCtx = snowCanvas?.getContext('2d');
+
+    if (snowCanvas && snowCtx && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let flakes = [];
+      let width = 0;
+      let height = 0;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      const resizeSnow = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        snowCanvas.width = Math.floor(width * dpr);
+        snowCanvas.height = Math.floor(height * dpr);
+        snowCanvas.style.width = width + 'px';
+        snowCanvas.style.height = height + 'px';
+        snowCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const count = Math.min(110, Math.max(35, Math.floor(width / 14)));
+        flakes = Array.from({ length: count }, () => createFlake(true));
+      };
+
+      const createFlake = (initial = false) => ({
+        x: Math.random() * width,
+        y: initial ? Math.random() * height : -10,
+        r: Math.random() * 2.2 + 0.7,
+        speed: Math.random() * 0.65 + 0.25,
+        drift: Math.random() * 0.45 - 0.225,
+        opacity: Math.random() * 0.45 + 0.22,
+        phase: Math.random() * Math.PI * 2,
+        swing: Math.random() * 0.018 + 0.006
+      });
+
+      let last = performance.now();
+
+      const drawSnow = (now) => {
+        const delta = Math.min((now - last) / 16.67, 2);
+        last = now;
+
+        snowCtx.clearRect(0, 0, width, height);
+
+        for (const flake of flakes) {
+          flake.phase += flake.swing * delta;
+          flake.y += flake.speed * delta;
+          flake.x += (flake.drift + Math.sin(flake.phase) * 0.25) * delta;
+
+          if (flake.y > height + 12 || flake.x < -15 || flake.x > width + 15) {
+            Object.assign(flake, createFlake(false));
+            flake.x = Math.random() * width;
+          }
+
+          snowCtx.beginPath();
+          snowCtx.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2);
+          snowCtx.fillStyle = `rgba(255,255,255,${flake.opacity})`;
+          snowCtx.fill();
+        }
+
+        requestAnimationFrame(drawSnow);
+      };
+
+      window.addEventListener('resize', resizeSnow, { passive: true });
+      resizeSnow();
+      requestAnimationFrame(drawSnow);
+    }
+
   </script>
 </body>
 </html>
