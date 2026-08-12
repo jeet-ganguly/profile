@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "def-kibana-ql",
+    "title":       "Defensive Security - Kibana Query Language - Notes",
+    "date":        "2026-08-09",
+    "type":        "notes",
+    "platform":    "Defensive Security",
+    "description": "Introdaction of Kibana Query Language for Defensive Security",
+    "tags":        ["blue team","soc","incident response","KQL","kibana","kibana query language"]
+  },
+  {
     "slug":        "def-elk-stack",
     "title":       "Defensive Security - ELK Stack for SIEM - Notes",
     "date":        "2026-08-09",
