@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "def-elk-stack",
+    "title":       "Defensive Security - ELK Stack for SIEM - Notes",
+    "date":        "2026-08-09",
+    "type":        "notes",
+    "platform":    "Defensive Security",
+    "description": "Introdaction of ELK Stack for SIEM management",
+    "tags":        ["blue team","soc","incident response","SIEM","ELK","elk stack"]
+  },
+  {
     "slug":        "def-event-ids",
     "title":       "Defensive Security - Windows Event Ids - Notes",
     "date":        "2026-08-09",
