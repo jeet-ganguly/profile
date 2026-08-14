@@ -1,6 +1,7 @@
 # Windows Privesc - Finding Sensitive Credentials in Windows
 
 > **Focus:** Red Team Enumeration
+> **Level:** OSCP / Red Team Practice
 > **Goal:** Identify exposed passwords, tokens, keys, and credential-related information that may be useful for further Windows privilege-escalation analysis.
 
 ---
