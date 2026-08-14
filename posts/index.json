@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "win-priv-sensitive-creds",
+    "title":       "Windows Privesc - Sensitive Credentials Hunting - Notes",
+    "date":        "2026-08-14",
+    "type":        "notes",
+    "platform":    "Offensive Security",
+    "description": "Windows Privilege Escalation using Sesitive Credentials",
+    "tags":        ["red team","privesc","windows privesc","sensitive creds"]
+  },
+  {
     "slug":        "def-kibana-ql",
     "title":       "Defensive Security - Kibana Query Language - Notes",
     "date":        "2026-08-09",
