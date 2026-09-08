@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "windows-internals-1",
+    "title":       "Windows Internals Part 1 - Notes",
+    "date":        "2026-09-08",
+    "type":        "notes",
+    "platform":    "Malware Analysis",
+    "description": "Windows Internals User & Kernel modes, high level archietecture, Windows API",
+    "tags":        ["malware-analysis","Windows-Internals","windows-API","user-mode","kernel-mode"]
+  },
+  {
     "slug":        "win-priv-misconf-service",
     "title":       "Windows Privesc - Misconfigured Service - Notes",
     "date":        "2026-08-14",
