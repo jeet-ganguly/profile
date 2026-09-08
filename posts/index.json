@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "windows-internals-2",
+    "title":       "Windows Internals Part 2 - Notes",
+    "date":        "2026-09-08",
+    "type":        "notes",
+    "platform":    "Malware Analysis",
+    "description": "Windows Internals PE structures, Processes, DLL working, Process Injection",
+    "tags":        ["malware-analysis","Windows-Internals","PE","dll","process-injection"]
+  },
+  {
     "slug":        "windows-internals-1",
     "title":       "Windows Internals Part 1 - Notes",
     "date":        "2026-09-08",
