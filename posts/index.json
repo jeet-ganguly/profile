@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "devsecops-intro",
+    "title":       "Introduction to DevSecOps - Notes",
+    "date":        "2026-09-09",
+    "type":        "notes",
+    "platform":    "DevSecOps",
+    "description": "Introduction to DevSecOps, Shifting Left, DevSecOps culture",
+    "tags":        ["devsecops","shifting-left","culture","ci/cd"]
+  },
+  {
     "slug":        "windows-internals-2",
     "title":       "Windows Internals Part 2 - Notes",
     "date":        "2026-09-08",
