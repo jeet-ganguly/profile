@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "devsecops-sdlc",
+    "title":       "Introduction to SDLC - Notes",
+    "date":        "2026-09-09",
+    "type":        "notes",
+    "platform":    "DevSecOps",
+    "description": "Introduction to Software Development Lifecycle, CALMS, devops metrics",
+    "tags":        ["devsecops","calms","sdlc","ci/cd","metrics"]
+  },
+  {
     "slug":        "devsecops-intro",
     "title":       "Introduction to DevSecOps - Notes",
     "date":        "2026-09-09",
