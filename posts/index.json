@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "malware-analysis-static",
+    "title":       "Static Analysis of Malware",
+    "date":        "2026-09-10",
+    "type":        "notes",
+    "platform":    "Malware Analysis",
+    "description": "Static analysis malware like filetype, malware fingerprinting, packer detection, string extraction, PE Header Information",
+    "tags":        ["malware-analysis","PE","fingerprinting","packer-detection"]
+  },
+  {
     "slug":        "devsecops-sdlc",
     "title":       "Introduction to SDLC - Notes",
     "date":        "2026-09-09",
