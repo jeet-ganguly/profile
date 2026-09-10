@@ -1,5 +1,14 @@
 [
   {
+    "slug":        "devsecops-ssdlc",
+    "title":       "Introduction to Secure SDLC - Notes",
+    "date":        "2026-09-10",
+    "type":        "notes",
+    "platform":    "DevSecOps",
+    "description": "Introduction to Secure Software Development Lifecycle, risk assement, threat modelling, secure coding, security assessment, methodologies",
+    "tags":        ["devsecops","ssdlc","risk-assesement","ci/cd","stride","pasta","dread"]
+  },
+  {
     "slug":        "malware-analysis-static",
     "title":       "Static Analysis of Malware",
     "date":        "2026-09-10",
